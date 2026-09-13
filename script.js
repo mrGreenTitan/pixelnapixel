@@ -1,0 +1,12 @@
+const languageMenu = document.querySelector(".language");
+
+languageMenu.addEventListener("click", () => {
+  const isOpened = languageMenu.classList.toggle("open");
+  if (!isOpened) {
+    languageMenu.classList.add("closing");
+
+    setTimeout(() => {
+      languageMenu.classList.remove("closing");
+    }, 500);
+  }
+});
