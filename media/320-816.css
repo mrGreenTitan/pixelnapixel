@@ -62,9 +62,8 @@
     line-height: 28px;
   }
 
-  .hero {
-    gap: clamp(55px, 16.2121px + 12.1212vw, 115px);
-    transform: translateY(0);
+  .m-homepage {
+    transform: translateY(clamp(100px, 263px + -20vw, 199px));
   }
 
   .hero-title {

@@ -97,6 +97,7 @@ h4 {
 
 .language {
   position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -263,22 +264,44 @@ h4 {
 /* HEADER END */
 
 /* MAIN START */
+main {
+  margin-top: -200px;
+}
+
 .m-wrap {
   position: relative;
-  display: flex;
+  width: 100%;
+  overflow: hidden;
+  transition: height 0.5s ease;
 }
+
+.track-pages {
+  display: flex;
+  width: 200%;
+  align-items: flex-start;
+  transition: transform 0.5s ease;
+}
+
+.m-homepage,
+.m-workspage {
+  flex: 0 0 50%;
+  width: 50%;
+  align-self: flex-start;
+}
+
+.m-wrap.is-work .track-pages {
+  transform: translateX(-50%);
+}
+
 /* HOME PAGE START */
 .m-homepage {
-  width: 100%;
-  opacity: 0;
-  background: red;
+  transform: translateY(54px);
 }
 
 .hero {
   display: flex;
   flex-direction: column;
   gap: 50px;
-  transform: translateY(-150px);
 }
 
 .hero-title {
@@ -606,21 +629,17 @@ h4 {
 /* HOME PAGE END */
 
 /* WORK PAGE START */
-.m-workspage {
-  position: absolute;
-  top: -210px;
-}
 
 .workspage-wrap {
   display: flex;
   flex-direction: column;
   gap: 110px;
+  margin-top: -10px;
 }
 
 .workspage-title {
   font-size: 72px;
   font-weight: 700;
-  transform: translateX(46px);
 }
 
 .works-wrap {
@@ -632,7 +651,7 @@ h4 {
 
 .works-wrap > div {
   display: flex;
-  gap: 144px;
+  justify-content: space-between;
 }
 
 .works-wrap > div:nth-child(2n) {

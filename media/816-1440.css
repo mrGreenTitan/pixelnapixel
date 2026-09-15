@@ -34,9 +34,12 @@
     line-height: clamp(1.75rem, -0.0808rem + 3.5897vw, 3.15rem);
   }
 
+  .m-homepage {
+    transform: translateY(clamp(54px, 160.1538px + -7.3718vw, 100px));
+  }
+
   .hero {
     gap: clamp(50px, 200px + -10.4167vw, 115px);
-    transform: translateY(clamp(-150px, -34.6154px + -8.0128vw, -100px));
   }
 
   .hero-title > h2 {
