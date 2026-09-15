@@ -19,3 +19,25 @@ burgMenu.addEventListener("click", function () {
   navigation.classList.toggle("open");
   languageMenu.classList.toggle("show");
 });
+
+const textMoreButtons = document.querySelectorAll(".text-more");
+
+textMoreButtons.forEach((button) => {
+  button.addEventListener("click", function () {
+    toggleDescription(button);
+  });
+});
+
+function toggleDescription(button) {
+  let actualBlockWrap = button.closest(".bl-r");
+  let block = actualBlockWrap.querySelector(".bl-text-wrap");
+  let isShow = block.classList.toggle("show");
+
+  if (isShow) {
+    block.style.maxHeight = block.scrollHeight + "px";
+    button.textContent = "Згорнути";
+  } else {
+    block.style.maxHeight = "455px";
+    button.textContent = "Більше";
+  }
+}

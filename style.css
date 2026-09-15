@@ -264,11 +264,14 @@ h4 {
 
 /* MAIN START */
 .m-wrap {
+  position: relative;
   display: flex;
 }
 /* HOME PAGE START */
 .m-homepage {
   width: 100%;
+  opacity: 0;
+  background: red;
 }
 
 .hero {
@@ -601,6 +604,155 @@ h4 {
 }
 
 /* HOME PAGE END */
+
+/* WORK PAGE START */
+.m-workspage {
+  position: absolute;
+  top: -210px;
+}
+
+.workspage-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 110px;
+}
+
+.workspage-title {
+  font-size: 72px;
+  font-weight: 700;
+  transform: translateX(46px);
+}
+
+.works-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 170px;
+  margin-bottom: 99px;
+}
+
+.works-wrap > div {
+  display: flex;
+  gap: 144px;
+}
+
+.works-wrap > div:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+
+.works-wrap > div > .bl-l {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 650px;
+  width: 650px;
+}
+
+.works-wrap > div > .bl-l .work-title-wrap {
+  text-align: center;
+}
+
+.works-wrap > div > .bl-l .work-title {
+  font-size: 32px;
+}
+
+.works-wrap > div > .bl-l .work-img {
+  width: 100%;
+  height: 455px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+}
+
+.works-wrap > .bl-work-1 > .bl-l .work-img {
+  background-image: url("img/work-img-1.webp");
+}
+
+.works-wrap > .bl-work-2 > .bl-l .work-img {
+  background-image: url("img/work-img-2.webp");
+}
+
+.works-wrap > .bl-work-3 > .bl-l .work-img {
+  background-image: url("img/work-img-3.webp");
+}
+
+.works-wrap > .bl-work-4 > .bl-l .work-img {
+  background-image: url("img/work-img-4.webp");
+}
+
+.works-wrap > .bl-work-5 > .bl-l .work-img {
+  background-image: url("img/work-img-5.webp");
+}
+
+.works-wrap > .bl-work-6 > .bl-l .work-img {
+  background-image: url("img/work-img-6.webp");
+}
+
+.works-wrap > .bl-work-7 > .bl-l .work-img {
+  background-image: url("img/work-img-7.webp");
+}
+
+.works-wrap > .bl-work-8 > .bl-l .work-img {
+  background-image: url("img/work-img-8.webp");
+}
+
+.works-wrap > div > .bl-r {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 556px;
+  width: 556px;
+}
+
+.bl-text-wrap {
+  display: flex;
+  flex-direction: column;
+  max-height: 455px;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  font-size: 20px;
+  padding-top: 30px;
+}
+
+.bl-text-wrap > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.work-text-three {
+  position: relative;
+}
+
+.work-control-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 31px;
+}
+
+.work-control-wrap > .text-more {
+  align-self: flex-end;
+  font-size: 24px;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
+
+.work-control-wrap > .open-work {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 335px;
+  height: 64px;
+  border: 0.5px solid #c9c9c9;
+  border-radius: 50px;
+  font-size: 24px;
+  background-color: rgb(255 255 255 / 10%);
+  color: white;
+  cursor: pointer;
+}
+
+/* WORK PAGE END */
 /* MAIN END */
 
 /* DECOR ELEMENTS START */
