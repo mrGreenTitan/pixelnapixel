@@ -10,3 +10,12 @@ languageMenu.addEventListener("click", () => {
     }, 500);
   }
 });
+
+const burgMenu = document.getElementById("burgMenu");
+const navigation = document.getElementById("navigation");
+
+burgMenu.addEventListener("click", function () {
+  burgMenu.classList.toggle("open");
+  navigation.classList.toggle("open");
+  languageMenu.classList.toggle("show");
+});
