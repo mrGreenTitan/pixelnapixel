@@ -99,7 +99,7 @@
   }
 
   .hero-name {
-    margin-left: clamp(-13px, -21.404px + 2.6263vw, 0px);
+    margin-left: 4px;
     font-size: clamp(18px, 3.7778px + 4.4444vw, 40px);
   }
 
@@ -211,7 +211,7 @@
   .contact {
     gap: clamp(30px, 10.6061px + 6.0606vw, 60px);
     margin-top: clamp(75px, 29.7475px + 14.1414vw, 145px);
-    margin-bottom: clamp(118px, -46.8485px + 51.5152vw, 373px);
+    margin-bottom: clamp(318px, 217.798px + 31.3131vw, 473px);
   }
 
   .contact-title {
