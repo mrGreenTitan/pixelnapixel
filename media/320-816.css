@@ -59,11 +59,11 @@
 
   .nav-wrap > nav > ul > li > a {
     font-size: 24px;
-    line-height: 28px;
+    line-height: 100%;
   }
 
   .m-homepage {
-    transform: translateY(clamp(100px, 263px + -20vw, 199px));
+    transform: translateY(clamp(114px, 252.303px + -16.9697vw, 198px));
   }
 
   .hero-title {
@@ -211,7 +211,7 @@
   .contact {
     gap: clamp(30px, 10.6061px + 6.0606vw, 60px);
     margin-top: clamp(75px, 29.7475px + 14.1414vw, 145px);
-    margin-bottom: clamp(318px, 217.798px + 31.3131vw, 473px);
+    margin-bottom: clamp(320px, 210.101px + 34.3434vw, 490px);
   }
 
   .contact-title {
@@ -351,6 +351,7 @@
   .nav-wrap > nav.mob > ul > li > a {
     font-size: 28px;
     font-weight: 700;
+    line-height: 140%;
   }
 
   main {

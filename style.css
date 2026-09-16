@@ -246,7 +246,7 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 6px;
+  gap: 16px;
 }
 
 .nav-wrap > nav > ul > li {
@@ -255,9 +255,9 @@ h4 {
 
 .nav-wrap > nav > ul > li > a {
   color: white;
-  font-size: 36px;
+  font-size: 34px;
   font-weight: 600;
-  line-height: 140%;
+  line-height: 100%;
   cursor: pointer;
 }
 
@@ -295,7 +295,7 @@ main {
 
 /* HOME PAGE START */
 .m-homepage {
-  transform: translateY(54px);
+  transform: translateY(118px);
 }
 
 .hero {
@@ -527,7 +527,7 @@ main {
   align-items: center;
   gap: 60px;
   margin-top: 198px;
-  margin-bottom: 317px;
+  margin-bottom: 380px;
 }
 
 .contact-title {
@@ -609,6 +609,10 @@ main {
 .cont-form-wrap .bl-one > .bl-social > .socials-icons {
   display: flex;
   gap: 23px;
+}
+
+.cont-form-wrap .bl-one > .bl-social > .socials-icons > div {
+  display: flex;
   cursor: pointer;
 }
 
@@ -629,6 +633,10 @@ main {
 /* HOME PAGE END */
 
 /* WORK PAGE START */
+
+.m-workspage {
+  display: none;
+}
 
 .workspage-wrap {
   display: flex;
