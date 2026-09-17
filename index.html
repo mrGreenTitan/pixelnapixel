@@ -8,12 +8,30 @@
 
     <link rel="icon" type="image/webp" href="img/favicon.webp" />
 
+    <!-- LOCAL -->
+    <style>
+      html.theme-loading .theme-control,
+      html.theme-loading .theme-control *,
+      html.theme-loading .theme-control::before,
+      html.theme-loading .theme-control::after {
+        transition: none !important;
+      }
+    </style>
+
+    <script>
+      const savedTheme = localStorage.getItem("theme");
+
+      document.documentElement.classList.add(savedTheme === "light" ? "light" : "dark");
+
+      document.documentElement.classList.add("theme-loading");
+    </script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="media/816-1440.css" media="screen and (min-width: 816px) and (max-width: 1440px)" />
     <link rel="stylesheet" href="media/320-816.css" media="screen and (min-width: 320px) and (max-width: 815px)" />
   </head>
-  <body class="light">
+  <body id="workArea">
     <div class="decor-element">
       <div class="layer-texture"></div>
       <div class="layer-gradient"></div>
@@ -49,7 +67,7 @@
               </div>
             </div>
 
-            <div class="theme-control dark">
+            <div id="themeSwither" class="theme-control">
               <label for="inpTheme">
                 <input type="checkbox" id="inpTheme" />
               </label>
