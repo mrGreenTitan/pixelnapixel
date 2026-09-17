@@ -126,15 +126,44 @@ if (heroSocials) {
 }
 
 const contSocialIcons = document.getElementById("contSocialIcons");
+const inpSocialWrap = document.querySelector(".bl-inp-social");
 
 if (contSocialIcons) {
   let iconsWrap = contSocialIcons.querySelectorAll("div");
-  iconsWrap.forEach((div) => {
+  let label = inpSocialWrap.querySelector("label");
+  let input = inpSocialWrap.querySelector("input");
+
+  let wrapInput = document.querySelector(".cont-form .bl-two");
+  let btn = document.querySelector(".cont-form .cont-btn-send");
+
+  iconsWrap.forEach((div, index) => {
     div.addEventListener("click", function () {
       iconsWrap.forEach((item) => {
         item.classList.remove("is-pick");
       });
+      input.value = "";
       div.classList.add("is-pick");
+      wrapInput.classList.add("is-pick");
+      btn.classList.add("show");
+
+      switch (index) {
+        case 0:
+          label.innerText = "Instagram";
+          input.placeholder = "@you_instagram78";
+          break;
+        case 1:
+          label.innerText = "Viber";
+          input.placeholder = "+380 96 000 00";
+          break;
+        case 2:
+          label.innerText = "Telegram";
+          input.placeholder = "@you_telegram39";
+          break;
+        default:
+          label.innerText = "WhatsApp";
+          input.placeholder = "+380 50 300 00";
+          break;
+      }
     });
   });
 }
