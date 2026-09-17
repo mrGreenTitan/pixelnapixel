@@ -254,6 +254,7 @@ h4 {
 }
 
 .nav-wrap > nav > ul > li > a {
+  position: relative;
   color: white;
   font-size: 34px;
   font-weight: 600;
@@ -397,6 +398,7 @@ main {
   color: black;
   background-color: rgba(255, 255, 255, 0.7);
   width: 395px;
+  transition: background-color 0.3s ease;
 }
 
 .hero-btns > a:nth-of-type(2) {
@@ -406,6 +408,7 @@ main {
   width: 315px;
   border: 0.5px solid #c9c9c9;
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
 }
 
 .hero-socials {
@@ -422,6 +425,10 @@ main {
 
 .hero-socials > div {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
   cursor: pointer;
 }
 
@@ -567,6 +574,7 @@ main {
   border-radius: 80px;
   padding: 0 24px;
   color: rgb(255 255 255 / 70%);
+  transition: background-color 0.3s ease;
 }
 
 .cont-form-wrap input::placeholder {
@@ -613,6 +621,10 @@ main {
 
 .cont-form-wrap .bl-one > .bl-social > .socials-icons > div {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
   cursor: pointer;
 }
 
@@ -623,11 +635,12 @@ main {
   margin-top: 16px;
   border: 1px solid #c9c9c9;
   border-radius: 80px;
-  background-color: rgb(255 255 255 / 70%);
+  background-color: rgb(0 0 0 / 20%);
   font-size: 24px;
   font-weight: 600;
-  line-height: 125%;
+  line-height: 100%;
   color: white;
+  transition: background-color 0.3s ease;
 }
 
 /* HOME PAGE END */
@@ -755,6 +768,25 @@ main {
   position: relative;
 }
 
+.work-text-three > .list-wreapepr > ul {
+  padding-left: 30px;
+}
+
+.work-text-three > .list-wreapepr > ul > li {
+  position: relative;
+}
+
+.work-text-three > .list-wreapepr > ul > li::before {
+  position: absolute;
+  content: "";
+  left: -16px;
+  top: 50%;
+  width: 3px;
+  height: 3px;
+  background-color: white;
+  border-radius: 50%;
+}
+
 .work-control-wrap {
   position: relative;
   display: flex;
@@ -786,6 +818,92 @@ main {
 
 /* WORK PAGE END */
 /* MAIN END */
+
+/* HOVER EFFECTS START */
+
+.nav-wrap > nav > ul > li > a.view {
+  color: rgb(255 255 255 / 80%);
+}
+
+.nav-wrap > nav > ul > li > a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 30px;
+  height: 1px;
+  background-color: white;
+  opacity: 0;
+
+  transition: opacity 0.8s ease;
+
+  animation: pingpong 0.8s ease-in-out infinite alternate;
+  animation-play-state: paused;
+}
+
+.nav-wrap > nav > ul > li > a:hover::before,
+.nav-wrap > nav > ul > li > a.view::before {
+  opacity: 1;
+  animation-play-state: running;
+}
+
+.nav-wrap > nav > ul > li > a.view::before {
+  background-color: rgb(255 255 255 / 80%);
+}
+
+@keyframes pingpong {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: calc(100% - 30px);
+  }
+}
+
+.hero-btns > a:nth-of-type(1):hover {
+  background-color: rgb(255 255 255 / 100%);
+}
+
+.hero-btns > a:nth-of-type(2):hover {
+  background-color: rgb(255 255 255 / 30%);
+}
+
+.cont-form-wrap input:hover,
+.cont-form-wrap input:focus {
+  background-color: rgb(255 255 255 / 20%);
+}
+
+.cont-from > .cont-btn-send:hover {
+  background-color: rgb(255 255 255 / 30%);
+}
+
+.hero-socials > div > svg > path,
+.cont-form-wrap .bl-one > .bl-social > .socials-icons > div > svg > path {
+  fill: rgb(255 255 255 / 70%);
+  transition: fill 0.3s ease;
+}
+
+.hero-socials > div:hover,
+.cont-form-wrap .bl-one > .bl-social > .socials-icons > div:hover {
+  transform: scale(1.1);
+}
+
+.hero-socials > div:hover > svg > path,
+.cont-form-wrap .bl-one > .bl-social > .socials-icons > div:hover > svg > path {
+  fill: rgb(255 255 255 / 100%);
+}
+
+.hero-socials > div.is-pick,
+.cont-form-wrap .bl-one > .bl-social > .socials-icons > div.is-pick {
+  transform: scale(1.1);
+}
+
+.hero-socials > div.is-pick > svg > path,
+.cont-form-wrap .bl-one > .bl-social > .socials-icons > div.is-pick > svg > path {
+  fill: rgb(255 255 255 / 100%);
+}
+
+/* HOVER EFFECTS END */
 
 /* DECOR ELEMENTS START */
 .decor-element {

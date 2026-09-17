@@ -110,3 +110,31 @@ if (wrapPages) {
 
   updatePageHeight();
 }
+
+const heroSocials = document.getElementById("heroSocials");
+
+if (heroSocials) {
+  let iconsWrap = heroSocials.querySelectorAll("div");
+  iconsWrap.forEach((div) => {
+    div.addEventListener("click", function () {
+      iconsWrap.forEach((item) => {
+        item.classList.remove("is-pick");
+      });
+      div.classList.add("is-pick");
+    });
+  });
+}
+
+const contSocialIcons = document.getElementById("contSocialIcons");
+
+if (contSocialIcons) {
+  let iconsWrap = contSocialIcons.querySelectorAll("div");
+  iconsWrap.forEach((div) => {
+    div.addEventListener("click", function () {
+      iconsWrap.forEach((item) => {
+        item.classList.remove("is-pick");
+      });
+      div.classList.add("is-pick");
+    });
+  });
+}
