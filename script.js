@@ -29,18 +29,41 @@ textMoreButtons.forEach((button) => {
 });
 
 function toggleDescription(button) {
-  let actualBlockWrap = button.closest(".bl-r");
-  let block = actualBlockWrap.querySelector(".bl-text-wrap");
-  let isShow = block.classList.toggle("show");
+  const actualBlockWrap = button.closest(".bl-r");
+  const block = actualBlockWrap.querySelector(".bl-text-wrap");
+  const isShow = block.classList.toggle("show");
 
   if (isShow) {
     block.style.maxHeight = block.scrollHeight + "px";
     button.textContent = "Згорнути";
   } else {
-    block.style.maxHeight = "455px";
+    updateTextBlockHeight(block);
     button.textContent = "Більше";
   }
 }
+
+function updateTextBlockHeight(block) {
+  if (window.innerWidth >= 1308) {
+    block.style.maxHeight = "455px";
+  } else if (window.innerWidth >= 816) {
+    block.style.maxHeight = "245px";
+  } else if (window.innerWidth >= 500) {
+    block.style.maxHeight = "245px";
+  } else {
+    block.style.maxHeight = "105px";
+  }
+}
+
+// Слідкуємо за змінами широкості вікна
+window.addEventListener("resize", function () {
+  document.querySelectorAll(".bl-text-wrap").forEach((block) => {
+    if (!block.classList.contains("show")) {
+      updateTextBlockHeight(block);
+    } else {
+      block.style.maxHeight = block.scrollHeight + "px";
+    }
+  });
+});
 
 const wrapPages = document.getElementById("wrapPages");
 const linkHomePage = document.getElementById("linkHomePage");
@@ -77,11 +100,13 @@ if (wrapPages) {
     updatePageHeight();
   });
 
+  // Слідкуємо за змінами восокості сторінок
   const resizeObserver = new ResizeObserver(function () {
     updatePageHeight();
   });
 
   resizeObserver.observe(homepage);
   resizeObserver.observe(workpage);
+
   updatePageHeight();
 }

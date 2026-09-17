@@ -26,15 +26,17 @@
   }
 
   .nav-wrap > nav > ul {
-    gap: clamp(6px, calc(29.077px - 1.603vw), 16px);
+    gap: clamp(6px, -7.0769px + 1.6026vw, 16px);
   }
 
   .nav-wrap > nav > ul > li > a {
     font-size: clamp(24px, 10.9231px + 1.6026vw, 34px);
   }
 
+  /* HOME PAGE START */
+
   .m-homepage {
-    transform: translateY(clamp(114px, 108.7692px + 0.641vw, 118px));
+    transform: translateY(clamp(89px, 218.2308px + -8.9744vw, 145px));
   }
 
   .hero {
@@ -132,6 +134,70 @@
 
   .contact {
     margin-top: clamp(9.0625rem, 4.7308rem + 8.4936vw, 12.375rem);
-    margin-bottom: clamp(380px, 633.8462px + -17.6282vw, 490px);
+    margin-bottom: clamp(353px, 738.3846px + -26.7628vw, 520px);
+  }
+
+  /* HOME PAGE END */
+
+  /* WORK PAGE START */
+  .workspage-wrap {
+    gap: clamp(20px, -97.6923px + 14.4231vw, 110px);
+    margin-top: clamp(26px, 111.3846px + -5.9295vw, 63px);
+  }
+
+  .workspage-title {
+    font-size: clamp(48px, 16.6154px + 3.8462vw, 72px);
+  }
+
+  .works-wrap {
+    gap: clamp(130px, 77.6923px + 6.4103vw, 170px);
+    margin-bottom: clamp(99px, 124.3846px + -1.7628vw, 110px);
+  }
+
+  .works-wrap > div {
+    gap: clamp(0px, 80.7692px + -5.609vw, 35px);
+  }
+
+  .works-wrap > div > .bl-l {
+    gap: clamp(35px, 28.4615px + 0.8013vw, 40px);
+    max-width: clamp(604px, 543.8462px + 7.3718vw, 650px);
+    width: clamp(604px, 543.8462px + 7.3718vw, 650px);
+  }
+
+  .works-wrap > div > .bl-l .work-title {
+    font-size: clamp(22px, 8.9231px + 1.6026vw, 32px);
+  }
+
+  .works-wrap > div > .bl-l .work-img {
+    width: clamp(572px, 470px + 12.5vw, 650px);
+    height: clamp(401px, 330.3846px + 8.6538vw, 455px);
+  }
+
+  .bl-text-wrap {
+    font-size: clamp(16px, 10.7692px + 0.641vw, 20px);
+  }
+
+  /* WORK PAGE END */
+}
+
+@media (min-width: 816px) and (max-width: 1308px) {
+  .works-wrap > div {
+    justify-content: center;
+  }
+
+  .works-wrap > div > .bl-l {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .works-wrap > div > .bl-r {
+    max-width: 604px;
+    min-width: 272px;
+    width: 604px;
+  }
+
+  .bl-text-wrap {
+    padding-top: clamp(0px, -49.7561px + 6.0976vw, 30px);
+    max-height: 245px;
   }
 }
