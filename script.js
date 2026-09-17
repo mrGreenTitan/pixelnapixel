@@ -173,33 +173,20 @@ const themeSwither = document.getElementById("themeSwither");
 if (themeSwither) {
   const workArea = document.getElementById("workArea");
   const input = themeSwither.querySelector("#inpTheme");
-
-  // Получаем тему, которую уже установил скрипт в <head>
   const isLight = document.documentElement.classList.contains("light");
-
-  // Синхронизируем checkbox с текущей темой
   input.checked = isLight;
 
-  // После установки checked убираем режим загрузки
   requestAnimationFrame(() => {
     document.documentElement.classList.remove("theme-loading");
   });
 
-  // Переключение темы
   input.addEventListener("change", () => {
     const isLight = input.checked;
-
-    // Отключаем transition на время смены темы
     document.documentElement.classList.add("theme-changing");
-
-    // Меняем тему
     document.documentElement.classList.toggle("light", isLight);
     document.documentElement.classList.toggle("dark", !isLight);
-
-    // Сохраняем выбранную тему
     localStorage.setItem("theme", isLight ? "light" : "dark");
 
-    // Возвращаем transition после применения новой темы
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
         document.documentElement.classList.remove("theme-changing");
