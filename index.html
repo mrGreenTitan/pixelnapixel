@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Портфоліо Front-end розробника. Спеціалізуюся на створенні адаптивних веб-інтерфейсів за допомогою HTML, CSS та JavaScript. Перегляньте мої проєкти." />
-    <title>Портфоліо Front-end розробника</title>
+    <meta
+      name="description"
+      data-i18n-content="meta_description"
+      content="Портфоліо Front-end розробника. Спеціалізуюся на створенні адаптивних веб-інтерфейсів за допомогою HTML, CSS та JavaScript. Перегляньте мої проєкти."
+    />
+    <title data-i18n="page_title">Портфоліо Front-end розробника</title>
 
     <link rel="icon" type="image/webp" href="img/favicon.webp" />
 
@@ -75,10 +79,10 @@
 
             <nav id="navigation" class="mob">
               <ul>
-                <li><a id="linkHomePage" class="view" href="#">Головна</a></li>
-                <li><a href="#">Про мене</a></li>
-                <li><a id="linkWorkPage" href="#">Роботи</a></li>
-                <li><a href="#">Зв'язок</a></li>
+                <li><a id="linkHomePage" class="view" href="#" data-i18n="nav_home">Головна</a></li>
+                <li><a href="#" data-i18n="nav_about">Про мене</a></li>
+                <li><a id="linkWorkPage" href="#" data-i18n="nav_works">Роботи</a></li>
+                <li><a href="#" data-i18n="nav_contant">Зв'язок</a></li>
               </ul>
             </nav>
           </div>
@@ -97,10 +101,10 @@
                   <h3>CSS</h3>
                 </div>
                 <div class="hero-cta">
-                  <div class="hero-name">Олексій Глазовий</div>
+                  <div class="hero-name" data-i18n="hero_name">Олексій Глазовий</div>
                   <div class="hero-btns">
-                    <a href="#">Почати проєкт</a>
-                    <a href="#">Приклади</a>
+                    <a href="#" data-i18n="btn_start_project">Почати проєкт</a>
+                    <a href="#" data-i18n="btn_view_works">Приклади</a>
                   </div>
                   <div id="heroSocials" class="hero-socials">
                     <div class="inst-wrap">
@@ -154,9 +158,9 @@
               <section class="aboutme">
                 <div class="about-wrap">
                   <div class="bl-l">
-                    <div class="about-title">Що отримуєте</div>
+                    <div class="about-title" data-i18n="about_title">Що отримуєте</div>
                     <div class="about-text">
-                      <p>
+                      <p data-i18n="about_text_p">
                         Ваш дизайн заслуговує на реалізацію без компромісів. Працюючи зі мною, ви отримуєте сучасний веб-продукт, готовий до реальних користувачів і подальшого розвитку. Я забезпечую
                         pixel-perfect реалізацію, ідеальну адаптивність, високу швидкість роботи та увагу до кожної деталі, щоб сайт виглядав і працював бездоганно на будь-якому пристрої.
                       </p>
@@ -168,15 +172,15 @@
               <section class="skills">
                 <div class="sk-wrap">
                   <div class="bl-l">
-                    <div class="skill-l-title">Фронтенд-навички</div>
+                    <div class="skill-l-title" data-i18n="skills_l_title">Фронтенд-навички</div>
                     <ul>
-                      <li>Адаптивний вебдизайн</li>
-                      <li>Кросбраузерна верстка</li>
-                      <li>Дизайн у код /PSD to HTML</li>
+                      <li data-i18n="skills_l_list_one">Адаптивний вебдизайн</li>
+                      <li data-i18n="skills_l_list_two">Кросбраузерна верстка</li>
+                      <li data-i18n="skills_l_list_three">Дизайн у код /PSD to HTML</li>
                     </ul>
                   </div>
                   <div class="bl-r">
-                    <div class="skill-r-title">Засоби</div>
+                    <div class="skill-r-title" data-i18n="skills_r_title">Засоби</div>
                     <ul>
                       <li>HTML5</li>
                       <li>CSS3</li>
@@ -186,22 +190,22 @@
                 </div>
               </section>
               <section class="contact">
-                <div class="contact-title">На зв'язку</div>
+                <div class="contact-title" data-i18n="contact_title">На зв'язку</div>
                 <div class="cont-form-wrap">
                   <form class="cont-form" action="#">
                     <div class="bl-one">
                       <div class="bl-inp-name">
-                        <label for="inpName">Ім'я</label>
-                        <input id="inpName" type="text" name="name" placeholder="Напишіть своє ім'я" />
+                        <label for="inpName" data-i18n="inp_name">Ім'я</label>
+                        <input id="inpName" type="text" name="name" placeholder="Напишіть своє ім'я" data-i18n-placeholder="input_name_pl" />
                       </div>
                       <div class="bl-inp-phone">
-                        <label for="inpPhone">Номер телефону</label>
-                        <input id="inpPhone" type="text" name="phone" placeholder="Вкажіть ваш телефон" />
+                        <label for="inpPhone" data-i18n="inp_phone">Номер телефону</label>
+                        <input id="inpPhone" type="text" name="phone" placeholder="Вкажіть ваш телефон" data-i18n-placeholder="input_phone_pl" />
                       </div>
                       <div class="bl-social">
                         <div class="social-text">
-                          <span>Не дзвонити?</span>
-                          <span>Оберіть бажаний св'язок</span>
+                          <span data-i18n="social_text_one">Не дзвонити?</span>
+                          <span data-i18n="social_text_two">Оберіть бажаний св'язок</span>
                         </div>
                         <div id="contSocialIcons" class="socials-icons">
                           <div class="from-instagram">
@@ -249,7 +253,7 @@
                         <input id="inpSocials" type="text" name="social" placeholder="@you_instagram78" />
                       </div>
                     </div>
-                    <button class="cont-btn-send" disabled>Надіслати</button>
+                    <button class="cont-btn-send" disabled data-i18n="btn_form_send">Надіслати</button>
                   </form>
                 </div>
               </section>
@@ -259,49 +263,49 @@
             <div id="workpage" class="m-workspage">
               <div class="workspage-wrap">
                 <div class="workspage-title">
-                  <span>Роботи</span>
+                  <span data-i18n="page_works">Роботи</span>
                 </div>
                 <div class="works-wrap">
                   <!-- WORK ONE START -->
                   <div class="bl-work-1">
                     <div class="bl-l">
                       <div class="work-title-wrap">
-                        <span class="work-title">GoVista — Адаптивний вебсайт для туристичного сервісу</span>
+                        <span class="work-title" data-i18n="work_one_title">GoVista — Адаптивний вебсайт для туристичного сервісу</span>
                       </div>
                       <div class="work-img"></div>
                     </div>
                     <div class="bl-r">
                       <div class="bl-text-wrap">
                         <div class="work-text-one">
-                          <span>Концепт:</span>
-                          <span>
+                          <span data-i18n="works_concept_title">Концепт:</span>
+                          <span data-i18n="works_one_concept_text">
                             Концепція лендингу для компанії, що організовує кураторські бутик-тури та активні подорожі. Проєкт наголошує на розширеній візуальній презентації, чіткій структурі макета,
                             динамічних картках турів, блоці ключових переваг, формі заявки на запит та повній мобільній оптимізації.
                           </span>
                         </div>
                         <div class="work-text-two">
-                          <span>Адаптивність та макет:</span>
-                          <span>
+                          <span data-i18n="works_respons">Адаптивність та макет:</span>
+                          <span data-i18n="works_one_respons_text">
                             Повністю оптимізовано для десктопів та мобільних пристроїв. Це забезпечує зручний мобільний досвід із виділеним меню навігації, зручними картками турів та надзвичайно
                             читабельною структурою контенту для малих екранів.
                           </span>
                         </div>
                         <div class="work-text-three">
-                          <span>Моя роль та результати:</span>
+                          <span data-i18n="works_results">Моя роль та результати:</span>
                           <div class="list-wreapepr">
                             <ul>
-                              <li>UI/UX Дизайн</li>
-                              <li>Front-End Розробка</li>
-                              <li>Адаптивний макет (Моб/Десктоп)</li>
-                              <li>Інтерактивне меню навігації</li>
-                              <li>Інтеграція форми запиту</li>
+                              <li data-i18n="works_results_li_one">UI/UX Дизайн</li>
+                              <li data-i18n="works_results_li_two">Front-End Розробка</li>
+                              <li data-i18n="works_results_li_three">Адаптивний макет (Моб/Десктоп)</li>
+                              <li data-i18n="works_results_li_four">Інтерактивне меню навігації</li>
+                              <li data-i18n="works_one_results_li_five">Інтеграція форми запиту</li>
                             </ul>
                           </div>
                         </div>
                       </div>
                       <div class="work-control-wrap">
-                        <button class="text-more">Більше</button>
-                        <a class="open-work" href="#">Відкрити Кейс</a>
+                        <button class="text-more" data-i18n="works_btn_more">Більше</button>
+                        <a class="open-work" href="#" data-i18n="works_btn_open">Відкрити Кейс</a>
                       </div>
                     </div>
                   </div>
@@ -310,44 +314,44 @@
                   <div class="bl-work-2">
                     <div class="bl-l">
                       <div class="work-title-wrap">
-                        <span class="work-title">Etran — адаптивний вебсайт для фінтех-додатка</span>
+                        <span class="work-title" data-i18n="work_two_title">Etran — адаптивний вебсайт для фінтех-додатка</span>
                       </div>
                       <div class="work-img"></div>
                     </div>
                     <div class="bl-r">
                       <div class="bl-text-wrap">
                         <div class="work-text-one">
-                          <span>Концепт:</span>
-                          <span>
+                          <span data-i18n="works_concept_title">Концепт:</span>
+                          <span data-i18n="works_two_concept_text">
                             Концепція лендингу для мобільного додатка, створеного для спрощення й прискорення грошових переказів, керування витратами та безпечного управління особистими фінансами
                             прямо зі смартфона. Проєкт фокусується на мінімалістичному фінтех-стилі, чистій структурі презентації, привабливому головному екрані, блоці ключових переваг, картках
                             показників продуктивності, секціях довіри, фінальному блоці високої конверсії CTA та повній мобільній оптимізації.
                           </span>
                         </div>
                         <div class="work-text-two">
-                          <span>Адаптивність та макет:</span>
-                          <span>
+                          <span data-i18n="works_respons">Адаптивність та макет:</span>
+                          <span ata-i18n="works_two_respons_text">
                             Повністю оптимізовано для десктопів та мобільних пристроїв. Це забезпечує зручний мобільний досвід із інтуїтивною презентацією ключових переваг, адаптивними картками
                             функцій, надзвичайно читабельними метриками та зручним для користувача макетом, структурованим спеціально для менших екранів.
                           </span>
                         </div>
                         <div class="work-text-three">
-                          <span>Моя роль та результати:</span>
+                          <span data-i18n="works_results">Моя роль та результати:</span>
                           <div class="list-wreapepr">
                             <ul class="role-list">
-                              <li>UI/UX Дизайн</li>
-                              <li>Front-End Розробка</li>
-                              <li>Адаптивний макет (Моб/Десктоп)</li>
-                              <li>Архітектура лендингу продукту</li>
-                              <li>Блок високої конверсії CTA</li>
-                              <li>Презентація фінтех-продукту</li>
+                              <li data-i18n="works_results_li_one">UI/UX Дизайн</li>
+                              <li data-i18n="works_results_li_two">Front-End Розробка</li>
+                              <li data-i18n="works_results_li_three">Адаптивний макет (Моб/Десктоп)</li>
+                              <li data-i18n="works_two_results_li_four">Архітектура лендингу продукту</li>
+                              <li data-i18n="works_two_results_li_five">Блок високої конверсії CTA</li>
+                              <li data-i18n="works_two_results_li_six">Презентація фінтех-продукту</li>
                             </ul>
                           </div>
                         </div>
                       </div>
                       <div class="work-control-wrap">
-                        <button class="text-more">Більше</button>
-                        <a class="open-work" href="#">Відкрити Кейс</a>
+                        <button class="text-more" data-i18n="works_btn_more">Більше</button>
+                        <a class="open-work" href="#" data-i18n="works_btn_open">Відкрити Кейс</a>
                       </div>
                     </div>
                   </div>
@@ -357,44 +361,44 @@
                   <div class="bl-work-3">
                     <div class="bl-l">
                       <div class="work-title-wrap">
-                        <span class="work-title">Travellian — Адаптивний лендинг для туристичної агенції</span>
+                        <span class="work-title" data-i18n="work_three_title">Travellian — Адаптивний лендинг для туристичної агенції</span>
                       </div>
                       <div class="work-img"></div>
                     </div>
                     <div class="bl-r">
                       <div class="bl-text-wrap">
                         <div class="work-text-one">
-                          <span>Концепт:</span>
-                          <span>
+                          <span data-i18n="works_concept_title">Концепт:</span>
+                          <span data-i18n="work_three_title">
                             Концепція вебсайту для туристичного сервісу, що допомагає користувачам відкривати напрямки, переглядати спеціальні пропозиції та планувати свої подорожі онлайн. Проєкт
                             наголошує на атмосферній візуальній презентації з просторим головним екраном, формою пошуку поїздок, популярними напрямками, картками акційних пропозицій, блоком
                             кураторських турів, імерсивною галереєю локацій та повною мобільною оптимізацією.
                           </span>
                         </div>
                         <div class="work-text-two">
-                          <span>Адаптивність та макет:</span>
-                          <span>
+                          <span data-i18n="works_respons">Адаптивність та макет:</span>
+                          <span data-i18n="works_three_respons_text">
                             Повністю оптимізовано для десктопів та мобільних пристроїв. Це включає спеціальну мобільну систему навігації, спрощену форму вибору подорожей, адаптивні картки напрямків та
                             надзвичайно читабельний макет, спеціально пристосований для менших екранів.
                           </span>
                         </div>
                         <div class="work-text-three">
-                          <span>Моя роль та результати:</span>
+                          <span data-i18n="works_results">Моя роль та результати:</span>
                           <div class="list-wreapepr">
                             <ul class="role-list">
-                              <li>UI/UX Дизайн</li>
-                              <li>Front-End Розробка</li>
-                              <li>Адаптивний макет (Моб/Десктоп)</li>
-                              <li>Інтерактивне меню навігації</li>
-                              <li>Форма пошуку та бронювання</li>
-                              <li>Динамічні каруселі напрямків</li>
+                              <li data-i18n="works_results_li_one">UI/UX Дизайн</li>
+                              <li data-i18n="works_results_li_two">Front-End Розробка</li>
+                              <li data-i18n="works_results_li_three">Адаптивний макет (Моб/Десктоп)</li>
+                              <li data-i18n="works_results_li_four">Інтерактивне меню навігації</li>
+                              <li data-i18n="works_three_results_li_five">Форма пошуку та бронювання</li>
+                              <li data-i18n="works_three_results_li_six">Динамічні каруселі напрямків</li>
                             </ul>
                           </div>
                         </div>
                       </div>
                       <div class="work-control-wrap">
-                        <button class="text-more">Більше</button>
-                        <a class="open-work" href="#">Відкрити Кейс</a>
+                        <button class="text-more" data-i18n="works_btn_more">Більше</button>
+                        <a class="open-work" href="#" data-i18n="works_btn_open">Відкрити Кейс</a>
                       </div>
                     </div>
                   </div>
@@ -404,45 +408,45 @@
                   <div class="bl-work-4">
                     <div class="bl-l">
                       <div class="work-title-wrap">
-                        <span class="work-title">Start — Адаптивний лендинг для стартапу / цифрової команди</span>
+                        <span class="work-title" data-i18n="work_four_title">Start — Адаптивний лендинг для стартапу / цифрової команди</span>
                       </div>
                       <div class="work-img"></div>
                     </div>
                     <div class="bl-r">
                       <div class="bl-text-wrap">
                         <div class="work-text-one">
-                          <span>Концепт:</span>
-                          <span>
+                          <span data-i18n="works_concept_title">Концепт:</span>
+                          <span data-i18n="works_four_concept_text">
                             Концепція вебсайту для команди, що допомагає запускати сучасні вебсайти, цифрові кампанії та сервісні сторінки для бізнесу. Проєкт фокусується на чистій презентації у
                             стартап-стилі, яскравому головному екрані з кастомною авторською ілюстрацією, розділі довіри партнерів, портфоліо-блоці «Вибрані роботи», цінових картках «Тарифи послуг»,
                             блоці команди, контактній формі та повній мобільній оптимізації.
                           </span>
                         </div>
                         <div class="work-text-two">
-                          <span>Адаптивність та макет:</span>
-                          <span>
+                          <span data-i18n="works_respons">Адаптивність та макет:</span>
+                          <span data-i18n="works_four_respons_text">
                             Повністю оптимізовано для десктопів та мобільних пристроїв. Це включає спеціальне мобільне меню, інтуїтивну структуру розділів, адаптивні картки портфоліо та цін, а також
                             спрощену контактну форму, адаптовану для менших екранів.
                           </span>
                         </div>
                         <div class="work-text-three">
-                          <span>Моя роль та результати:</span>
+                          <span data-i18n="works_results">Моя роль та результати:</span>
                           <div class="list-wreapepr">
                             <ul class="role-list">
-                              <li>UI/UX Дизайн</li>
-                              <li>Front-End Розробка</li>
-                              <li>Адаптивний макет (Моб/Десктоп)</li>
-                              <li>Інтерактивне меню навігації</li>
-                              <li>Блок презентації портфоліо</li>
-                              <li>Картки цін та планів послуг</li>
-                              <li>Інтеграція форми зв'язку</li>
+                              <li data-i18n="works_results_li_one">UI/UX Дизайн</li>
+                              <li data-i18n="works_results_li_two">Front-End Розробка</li>
+                              <li data-i18n="works_results_li_three">Адаптивний макет (Моб/Десктоп)</li>
+                              <li data-i18n="works_results_li_four">Інтерактивне меню навігації</li>
+                              <li data-i18n="works_four_results_li_five">Блок презентації портфоліо</li>
+                              <li data-i18n="works_four_results_li_six">Картки цін та планів послуг</li>
+                              <li data-i18n="works_four_results_li_seven">Інтеграція форми зв'язку</li>
                             </ul>
                           </div>
                         </div>
                       </div>
                       <div class="work-control-wrap">
-                        <button class="text-more">Більше</button>
-                        <a class="open-work" href="#">Відкрити Кейс</a>
+                        <button class="text-more" data-i18n="works_btn_more">Більше</button>
+                        <a class="open-work" href="#" data-i18n="works_btn_open">Відкрити Кейс</a>
                       </div>
                     </div>
                   </div>
@@ -452,44 +456,44 @@
                   <div class="bl-work-5">
                     <div class="bl-l">
                       <div class="work-title-wrap">
-                        <span class="work-title">Andriy Bol. — Адаптивний сайт-портфоліо для Front-End розробника</span>
+                        <span class="work-title" data-i18n="work_five_title">Andriy Bol. — Адаптивний сайт-портфоліо для Front-End розробника</span>
                       </div>
                       <div class="work-img"></div>
                     </div>
                     <div class="bl-r">
                       <div class="bl-text-wrap">
                         <div class="work-text-one">
-                          <span>Концепт:</span>
-                          <span>
+                          <span data-i18n="works_concept_title">Концепт:</span>
+                          <span data-i18n="works_five_concept_text">
                             Концепт особистого сайту-портфоліо для front-end розробника, створений для демонстрації професійних навичок, досвіду роботи та проєктів, а також надання потенційним
                             клієнтам чи рекрутерам можливості зв'язатися через контактну форму. Проєкт фокусується на мінімалістичному монохромному візуальному стилі, чистій структурі презентації,
                             виділеному блоці навичок, хронології досвіду, секції демонстрації проєктів, формі зворотного зв'язку та опції прямого завантаження резюме/CV.
                           </span>
                         </div>
                         <div class="work-text-two">
-                          <span>Адаптивність та макет:</span>
-                          <span>
+                          <span data-i18n="works_respons">Адаптивність та макет:</span>
+                          <span data-i18n="works_five_respons_text">
                             Повністю оптимізовано для десктопів та мобільних пристроїв. Це забезпечує безшовний користувацький досвід зі спеціальним мобільним меню навігації, інтуїтивним макетом
                             біографії розробника, адаптивними картками навичок, оптимізованою сіткою проєктів та високою читабельністю на менших екранах.
                           </span>
                         </div>
                         <div class="work-text-three">
-                          <span>Моя роль та результати:</span>
+                          <span data-i18n="works_results">Моя роль та результати:</span>
                           <div class="list-wreapepr">
                             <ul class="role-list">
-                              <li>UI/UX Дизайн</li>
-                              <li>Front-End Розробка</li>
-                              <li>Адаптивний макет (Моб/Десктоп)</li>
-                              <li>Інтерактивне меню навігації</li>
-                              <li>Інтеграція форми зв'язку</li>
-                              <li>Функція завантаження резюме/CV</li>
+                              <li data-i18n="works_results_li_one">UI/UX Дизайн</li>
+                              <li data-i18n="works_results_li_two">Front-End Розробка</li>
+                              <li data-i18n="works_results_li_three">Адаптивний макет (Моб/Десктоп)</li>
+                              <li data-i18n="works_results_li_four">Інтерактивне меню навігації</li>
+                              <li data-i18n="works_five_results_li_five">Інтеграція форми зв'язку</li>
+                              <li data-i18n="works_five_results_li_six">Функція завантаження резюме/CV</li>
                             </ul>
                           </div>
                         </div>
                       </div>
                       <div class="work-control-wrap">
-                        <button class="text-more">Більше</button>
-                        <a class="open-work" href="#">Відкрити Кейс</a>
+                        <button class="text-more" data-i18n="works_btn_more">Більше</button>
+                        <a class="open-work" href="#" data-i18n="works_btn_open">Відкрити Кейс</a>
                       </div>
                     </div>
                   </div>
@@ -499,44 +503,44 @@
                   <div class="bl-work-6">
                     <div class="bl-l">
                       <div class="work-title-wrap">
-                        <span class="work-title">Area — Адаптивний лендинг для запуску аналітичного продукту</span>
+                        <span class="work-title" data-i18n="work_six_title">Area — Адаптивний лендинг для запуску аналітичного продукту</span>
                       </div>
                       <div class="work-img"></div>
                     </div>
                     <div class="bl-r">
                       <div class="bl-text-wrap">
                         <div class="work-text-one">
-                          <span>Концепт:</span>
-                          <span>
+                          <span data-i18n="works_concept_title">Концепт:</span>
+                          <span data-i18n="works_six_concept_text">
                             Концепція лендингу для сучасного аналітичного продукту, розробленого для демонстрації ключових можливостей платформи, підкреслення її головних переваг та плавного залучення
                             користувачів до запиту демонстрації продукту. Проєкт фокусується на чистій, мінімалістичній візуальній презентації з просторим головним екраном, інтерактивним прев'ю
                             продукту, блоком переваг, секцією розбору функцій, таблицею порівняння даних, фінальним блоком заклику до дії (CTA) та повною мобільною оптимізацією.
                           </span>
                         </div>
                         <div class="work-text-two">
-                          <span>Адаптивність та макет:</span>
-                          <span>
+                          <span data-i18n="works_respons">Адаптивність та макет:</span>
+                          <span data-i18n="works_six_respons_text">
                             Повністю оптимізовано для десктопів та мобільних пристроїв. Це пропонує інтуїтивний мобільний досвід із виділеним меню навігації, надзвичайно читабельними макетами переваг
                             та оптимізованою структурою контенту, адаптованою для менших екранів.
                           </span>
                         </div>
                         <div class="work-text-three">
-                          <span>Моя роль та результати:</span>
+                          <span data-i18n="works_results">Моя роль та результати:</span>
                           <div class="list-wreapepr">
                             <ul class="role-list">
-                              <li>UI/UX Дизайн</li>
-                              <li>Front-End Розробка</li>
-                              <li>Адаптивний макет (Моб/Десктоп)</li>
-                              <li>Інтерактивне меню навігації</li>
-                              <li>Архітектура лендингу продукту</li>
-                              <li>Інтеграція CTA запиту демо</li>
+                              <li data-i18n="works_results_li_one">UI/UX Дизайн</li>
+                              <li data-i18n="works_results_li_two">Front-End Розробка</li>
+                              <li data-i18n="works_results_li_three">Адаптивний макет (Моб/Десктоп)</li>
+                              <li data-i18n="works_results_li_four">Інтерактивне меню навігації</li>
+                              <li data-i18n="works_six_results_li_five">Архітектура лендингу продукту</li>
+                              <li data-i18n="works_six_results_li_six">Інтеграція CTA запиту демо</li>
                             </ul>
                           </div>
                         </div>
                       </div>
                       <div class="work-control-wrap">
-                        <button class="text-more">Більше</button>
-                        <a class="open-work" href="#">Відкрити Кейс</a>
+                        <button class="text-more" data-i18n="works_btn_more">Більше</button>
+                        <a class="open-work" href="#" data-i18n="works_btn_open">Відкрити Кейс</a>
                       </div>
                     </div>
                   </div>
@@ -546,44 +550,44 @@
                   <div class="bl-work-7">
                     <div class="bl-l">
                       <div class="work-title-wrap">
-                        <span class="work-title">Alex Portfolio — Адаптивний сайт-портфоліо веб-розробника</span>
+                        <span class="work-title" data-i18n="work_seven_title">Alex Portfolio — Адаптивний сайт-портфоліо веб-розробника</span>
                       </div>
                       <div class="work-img"></div>
                     </div>
                     <div class="bl-r">
                       <div class="bl-text-wrap">
                         <div class="work-text-one">
-                          <span>Концепт:</span>
-                          <span>
+                          <span data-i18n="works_concept_title">Концепт:</span>
+                          <span data-i18n="works_seven_concept_text">
                             Концепція персонального сайту-портфоліо для веб-розробника, що спеціалізується на ефектних лендингах, адаптивних інтерфейсах та унікальних бізнес-сайтах. Проєкт
                             відзначається сміливою візуальною презентацією з преміальною темною естетикою, вражаючим головним екраном, інтерактивним 3D-об'єктом, динамічною демонстрацією проєктів,
                             секцією послуг, відгуками клієнтів та повнофункціональною контактною формою.
                           </span>
                         </div>
                         <div class="work-text-two">
-                          <span>Адаптивність та макет:</span>
-                          <span>
+                          <span data-i18n="works_respons">Адаптивність та макет:</span>
+                          <span data-i18n="works_seven_respons_text">
                             Повністю оптимізовано для десктопів та мобільних пристроїв. Це включає спеціальне мобільне меню, інтуїтивний макет, адаптований для невеликих екранів, та плавні
                             скрол-анімації, які демонструють динамічну інтерактивність сайту.
                           </span>
                         </div>
                         <div class="work-text-three">
-                          <span>Моя роль та результати:</span>
+                          <span data-i18n="works_results">Моя роль та результати:</span>
                           <div class="list-wreapepr">
                             <ul class="role-list">
-                              <li>UI/UX Дизайн</li>
-                              <li>Front-End Розробка</li>
-                              <li>Адаптивний макет (Моб/Десктоп)</li>
-                              <li>Інтерактивне меню навігації</li>
-                              <li>Анімації при прокручуванні</li>
-                              <li>Інтеграція форми зв'язку</li>
+                              <li data-i18n="works_results_li_one">UI/UX Дизайн</li>
+                              <li data-i18n="works_results_li_two">Front-End Розробка</li>
+                              <li data-i18n="works_results_li_three">Адаптивний макет (Моб/Десктоп)</li>
+                              <li data-i18n="works_results_li_four">Інтерактивне меню навігації</li>
+                              <li data-i18n="works_seven_results_li_five">Анімації при прокручуванні</li>
+                              <li data-i18n="works_seven_results_li_six">Інтеграція форми зв'язку</li>
                             </ul>
                           </div>
                         </div>
                       </div>
                       <div class="work-control-wrap">
-                        <button class="text-more">Більше</button>
-                        <a class="open-work" href="#">Відкрити Кейс</a>
+                        <button class="text-more" data-i18n="works_btn_more">Більше</button>
+                        <a class="open-work" href="#" data-i18n="works_btn_open">Відкрити Кейс</a>
                       </div>
                     </div>
                   </div>
@@ -593,43 +597,43 @@
                   <div class="bl-work-8">
                     <div class="bl-l">
                       <div class="work-title-wrap">
-                        <span class="work-title">Alex Portfolio — Адаптивний вебсайт для філіппінського туристичного сервісу</span>
+                        <span class="work-title" data-i18n="work_eight_title">Alex Portfolio — Адаптивний вебсайт для філіппінського туристичного сервісу</span>
                       </div>
                       <div class="work-img"></div>
                     </div>
                     <div class="bl-r">
                       <div class="bl-text-wrap">
                         <div class="work-text-one">
-                          <span>Концепт:</span>
-                          <span>
+                          <span data-i18n="works_concept_title">Концепт:</span>
+                          <span data-i18n="works_eight_concept_text">
                             Концепція лендингу для туристичного сервісу, присвяченого плануванню поїздок по Філіппінах, що допомагає користувачам обирати напрямки, пакетні тури та індивідуальні
                             маршрути відповідно до різних стилів подорожей. Проєкт робить акцент на імерсивній, атмосферній візуальній презентації зі зручним рядком пошуку, інтерактивною каруселлю з
                             картками напрямків, блоком ключових переваг, кураторськими турпакетами, туристичним блогом та повною мобільною оптимізацією.
                           </span>
                         </div>
                         <div class="work-text-two">
-                          <span>Адаптивність та макет:</span>
-                          <span>
+                          <span data-i18n="works_respons">Адаптивність та макет:</span>
+                          <span data-i18n="works_eight_respons_text">
                             Повністю оптимізовано для десктопів та мобільних пристроїв. Це забезпечує інтуїтивний мобільний досвід із виділеним меню навігації, оптимізованими макетами напрямків та
                             надзвичайно читабельною структурою контенту, адаптованою для менших екранів.
                           </span>
                         </div>
                         <div class="work-text-three">
-                          <span>Моя роль та результати:</span>
+                          <span data-i18n="works_results">Моя роль та результати:</span>
                           <div class="list-wreapepr">
                             <ul class="role-list">
-                              <li>UI/UX Дизайн</li>
-                              <li>Front-End Розробка</li>
-                              <li>Адаптивний макет (Моб/Десктоп)</li>
-                              <li>Інтерактивне меню навігації</li>
-                              <li>Динамічна карусель напрямків</li>
+                              <li data-i18n="works_results_li_one">UI/UX Дизайн</li>
+                              <li data-i18n="works_results_li_two">Front-End Розробка</li>
+                              <li data-i18n="works_results_li_three">Адаптивний макет (Моб/Десктоп)</li>
+                              <li data-i18n="works_results_li_four">Інтерактивне меню навігації</li>
+                              <li data-i18n="works_eight_results_li_five">Динамічна карусель напрямків</li>
                             </ul>
                           </div>
                         </div>
                       </div>
                       <div class="work-control-wrap">
-                        <button class="text-more">Більше</button>
-                        <a class="open-work" href="#">Відкрити Кейс</a>
+                        <button class="text-more" data-i18n="works_btn_more">Більше</button>
+                        <a class="open-work" href="#" data-i18n="works_btn_open">Відкрити Кейс</a>
                       </div>
                     </div>
                   </div>
