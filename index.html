@@ -46,7 +46,7 @@
         <div class="h-wrap">
           <div class="language mob">
             <div class="language-actual">
-              <span>UK</span>
+              <span id="selectLanguage" value="uk">UK</span>
               <span>
                 <svg width="18" height="8" viewBox="0 0 18 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -56,10 +56,10 @@
                 </svg>
               </span>
             </div>
-            <ul>
-              <li>EN</li>
-              <li>PL</li>
-              <li>RU</li>
+            <ul id="langList">
+              <li value="en" data-lang="en">EN</li>
+              <li value="pl" data-lang="pl">PL</li>
+              <li value="ru" data-lang="ru">RU</li>
             </ul>
           </div>
           <div class="nav-wrap">
@@ -196,16 +196,16 @@
                     <div class="bl-one">
                       <div class="bl-inp-name">
                         <label for="inpName" data-i18n="inp_name">Ім'я</label>
-                        <input id="inpName" type="text" name="name" placeholder="Напишіть своє ім'я" data-i18n-placeholder="input_name_pl" />
+                        <input id="inpName" type="text" name="name" placeholder="Напишіть своє ім'я" data-i18n-placeholder="input_name_uk" />
                       </div>
                       <div class="bl-inp-phone">
                         <label for="inpPhone" data-i18n="inp_phone">Номер телефону</label>
-                        <input id="inpPhone" type="text" name="phone" placeholder="Вкажіть ваш телефон" data-i18n-placeholder="input_phone_pl" />
+                        <input id="inpPhone" type="text" name="phone" placeholder="Вкажіть ваш телефон" data-i18n-placeholder="input_phone_uk" />
                       </div>
                       <div class="bl-social">
                         <div class="social-text">
                           <span data-i18n="social_text_one">Не дзвонити?</span>
-                          <span data-i18n="social_text_two">Оберіть бажаний св'язок</span>
+                          <span data-i18n="social_text_two">Оберіть бажаний зв'язок</span>
                         </div>
                         <div id="contSocialIcons" class="socials-icons">
                           <div class="from-instagram">
@@ -369,7 +369,7 @@
                       <div class="bl-text-wrap">
                         <div class="work-text-one">
                           <span data-i18n="works_concept_title">Концепт:</span>
-                          <span data-i18n="work_three_title">
+                          <span data-i18n="works_thre_concept_text">
                             Концепція вебсайту для туристичного сервісу, що допомагає користувачам відкривати напрямки, переглядати спеціальні пропозиції та планувати свої подорожі онлайн. Проєкт
                             наголошує на атмосферній візуальній презентації з просторим головним екраном, формою пошуку поїздок, популярними напрямками, картками акційних пропозицій, блоком
                             кураторських турів, імерсивною галереєю локацій та повною мобільною оптимізацією.
@@ -597,7 +597,7 @@
                   <div class="bl-work-8">
                     <div class="bl-l">
                       <div class="work-title-wrap">
-                        <span class="work-title" data-i18n="work_eight_title">Alex Portfolio — Адаптивний вебсайт для філіппінського туристичного сервісу</span>
+                        <span class="work-title" data-i18n="work_eight_title">WANDER.gig — Адаптивний вебсайт для філіппінського туристичного сервісу</span>
                       </div>
                       <div class="work-img"></div>
                     </div>

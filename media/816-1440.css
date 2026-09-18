@@ -98,7 +98,7 @@
   }
 
   .aboutme {
-    margin-top: clamp(0.3125rem, -9.0865rem + 18.4295vw, 7.5rem);
+    margin-top: clamp(105px, 85.3846px + 2.4038vw, 120px);
   }
 
   .about-wrap > .bl-l {

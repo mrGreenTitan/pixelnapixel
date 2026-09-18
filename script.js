@@ -1,14 +1,157 @@
-const languageMenu = document.querySelector(".language");
+// Підтягуємо мову
+const translationsCache = {};
 
-languageMenu.addEventListener("click", () => {
-  const isOpened = languageMenu.classList.toggle("open");
-  if (!isOpened) {
-    languageMenu.classList.add("closing");
-
-    setTimeout(() => {
-      languageMenu.classList.remove("closing");
-    }, 500);
+async function fetchTransl(lang) {
+  if (translationsCache[lang]) {
+    return translationsCache[lang];
   }
+
+  try {
+    let loadLang = await fetch(`translations/${lang}.json`);
+    if (!loadLang.ok) throw new Error(`Файл translations/${lang}.json не найден`);
+
+    let data = await loadLang.json();
+    translationsCache[lang] = data;
+    return data;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+}
+
+// Допоміжна функція для універсального пошуку перекладу
+function getTranslationValue(translate, rawKey, lang) {
+  if (translate[rawKey]) return translate[rawKey];
+
+  const baseKey = rawKey.replace(/_[a-z]{2}$/i, "");
+  const langKey = `${baseKey}_${lang}`;
+
+  if (translate[langKey]) return translate[langKey];
+  if (translate[baseKey]) return translate[baseKey];
+
+  return null;
+}
+
+// Знаходимо на сторінці текст та оновлюємо його
+async function switchLang(lang) {
+  let translate = await fetchTransl(lang);
+  if (!translate) return;
+
+  // 1. Оновлюємо звичайний текст [data-i18n]
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    let rawKey = el.getAttribute("data-i18n");
+    let value = getTranslationValue(translate, rawKey, lang);
+    if (value) {
+      el.textContent = value;
+    }
+  });
+
+  // 2. Оновлюємо плейсхолдери [data-i18n-placeholder]
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+    let rawKey = el.getAttribute("data-i18n-placeholder");
+    let value = getTranslationValue(translate, rawKey, lang);
+    if (value) {
+      el.placeholder = value;
+    }
+  });
+
+  localStorage.setItem("selectedLang", lang);
+  document.documentElement.lang = lang;
+}
+
+// Оновлюємо значення актуального спану з мовою
+function updateSpanLang(lang) {
+  let selectSpan = document.getElementById("selectLanguage");
+  if (selectSpan) {
+    selectSpan.textContent = lang.toUpperCase();
+    selectSpan.setAttribute("value", lang);
+  }
+}
+
+// Функция раскрытия/сворачивания описания
+function toggleDescription(button) {
+  const actualBlockWrap = button.closest(".bl-r");
+  const block = actualBlockWrap.querySelector(".bl-text-wrap");
+  const isShow = block.classList.toggle("show");
+
+  // Ключ перевода в зависимости от состояния
+  const key = isShow ? "works_btn_more_hide" : "works_btn_more";
+  button.setAttribute("data-i18n", key);
+
+  // Подтягиваем переведённый текст
+  const currentLang = localStorage.getItem("selectedLang") || "uk";
+  const translate = translationsCache[currentLang];
+
+  if (translate) {
+    const text = getTranslationValue(translate, key, currentLang);
+    if (text) {
+      button.textContent = text;
+    }
+  } else {
+    button.textContent = isShow ? "Згорнути" : "Більше";
+  }
+
+  if (isShow) {
+    block.style.maxHeight = block.scrollHeight + "px";
+  } else {
+    updateTextBlockHeight(block);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  let languageMenu = document.querySelector(".language");
+  let selectSpan = document.getElementById("selectLanguage");
+
+  let currentLang = localStorage.getItem("selectedLang") || "uk";
+  let defaultHtmlLang = "uk";
+
+  if (currentLang !== defaultHtmlLang) {
+    let liToSwap = document.querySelector(`li[data-lang="${currentLang}"]`);
+    if (liToSwap) {
+      liToSwap.setAttribute("data-lang", defaultHtmlLang);
+      liToSwap.setAttribute("value", defaultHtmlLang);
+      liToSwap.textContent = defaultHtmlLang.toUpperCase();
+    }
+  }
+
+  updateSpanLang(currentLang);
+  switchLang(currentLang);
+
+  if (languageMenu) {
+    languageMenu.addEventListener("click", (event) => {
+      let isOpened = languageMenu.classList.toggle("open");
+
+      if (!isOpened) {
+        languageMenu.classList.add("closing");
+        setTimeout(() => {
+          languageMenu.classList.remove("closing");
+        }, 500);
+      }
+
+      const li = event.target.closest("li[data-lang]");
+      if (li) {
+        let prevLang = selectSpan.getAttribute("value");
+        let prevText = selectSpan.textContent;
+
+        let chosenLang = li.getAttribute("data-lang");
+
+        li.setAttribute("data-lang", prevLang);
+        li.setAttribute("value", prevLang);
+        li.textContent = prevText;
+
+        updateSpanLang(chosenLang);
+        switchLang(chosenLang);
+      }
+    });
+  }
+
+  // Навешивание обработчиков на кнопки "Більше / Згорнути"
+  const textMoreButtons = document.querySelectorAll(".text-more");
+  textMoreButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      toggleDescription(button);
+    });
+  });
 });
 
 const burgMenu = document.getElementById("burgMenu");
@@ -19,28 +162,6 @@ burgMenu.addEventListener("click", function () {
   navigation.classList.toggle("open");
   languageMenu.classList.toggle("show");
 });
-
-const textMoreButtons = document.querySelectorAll(".text-more");
-
-textMoreButtons.forEach((button) => {
-  button.addEventListener("click", function () {
-    toggleDescription(button);
-  });
-});
-
-function toggleDescription(button) {
-  const actualBlockWrap = button.closest(".bl-r");
-  const block = actualBlockWrap.querySelector(".bl-text-wrap");
-  const isShow = block.classList.toggle("show");
-
-  if (isShow) {
-    block.style.maxHeight = block.scrollHeight + "px";
-    button.textContent = "Згорнути";
-  } else {
-    updateTextBlockHeight(block);
-    button.textContent = "Більше";
-  }
-}
 
 function updateTextBlockHeight(block) {
   if (window.innerWidth >= 1308) {
@@ -171,7 +292,6 @@ if (contSocialIcons) {
 const themeSwither = document.getElementById("themeSwither");
 
 if (themeSwither) {
-  const workArea = document.getElementById("workArea");
   const input = themeSwither.querySelector("#inpTheme");
   const isLight = document.documentElement.classList.contains("light");
   input.checked = isLight;
