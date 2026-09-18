@@ -156,6 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const burgMenu = document.getElementById("burgMenu");
 const navigation = document.getElementById("navigation");
+const languageMenu = document.querySelector(".language");
 
 burgMenu.addEventListener("click", function () {
   burgMenu.classList.toggle("open");
