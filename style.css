@@ -113,6 +113,23 @@ html.theme-changing body *:not(.theme-control):not(.theme-control *)::after {
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  overflow: hidden;
+  font-family: "Jura", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.0012em;
+  line-height: 1.4;
+  background-color: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 a {
   text-decoration: none;
 }
@@ -135,17 +152,6 @@ input,
 textarea {
   all: unset;
   box-sizing: border-box;
-}
-
-body {
-  font-family: "Jura", sans-serif;
-  font-size: 16px;
-  letter-spacing: 0.0012em;
-  line-height: 1.4;
-  background-color: var(--bg);
-  color: var(--text);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
@@ -536,7 +542,7 @@ main {
 }
 
 .aboutme {
-  margin-top: 120px;
+  margin-top: 269px;
 }
 
 .about-wrap {
@@ -1058,38 +1064,219 @@ main {
 /* HOVER EFFECTS END */
 
 /* DECOR ELEMENTS START */
-.decor-element {
-  display: none;
-}
 
-.layer-texture-one {
-  display: none;
+.decor-element-one {
   position: absolute;
-  width: 872px;
-  height: 805px;
-  background: url(img/texture-lg.svg) center / contain no-repeat;
-  top: -270px;
-  right: -230px;
+  pointer-events: none;
+  width: 1700px;
+  height: 1700px;
+  top: -652px;
+  right: -668px;
 }
 
-.layer-gradient {
-  width: 647px;
-  height: 661px;
-  background: radial-gradient(circle, rgba(120, 12, 255, 1), transparent);
-  border-radius: 50%;
-  filter: blur(140px);
-  top: -150px;
-  right: -100px;
+.decor-element-one > .texture {
+  z-index: 0;
+  position: absolute;
+  pointer-events: none;
+  background-image: url(img/gradient-violet-lg.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.layer-cube {
+.decor-element-one > .ui-cube {
+  z-index: -1;
+  position: absolute;
+  pointer-events: none;
   width: 700px;
   height: 700px;
   aspect-ratio: 1 / 1;
-  background: url(img/cube-md.svg) center / contain no-repeat;
-  top: -380px;
-  right: -120px;
-  transform: rotate(-88deg);
+  left: 50%;
+  top: 50%;
+  transform: translate(calc(-50% + -99px), calc(-50% + -226px)) rotate(-88deg);
+  --fill-op: 0.3;
+  --stroke-op: 0.3;
+}
+
+.decor-element-two {
+  position: absolute;
+  pointer-events: none;
+  width: 1460px;
+  aspect-ratio: 1 / 1;
+  top: 800px;
+  left: -680px;
+}
+
+.decor-element-two > .texture {
+  z-index: 0;
+  position: absolute;
+  pointer-events: none;
+  background-image: url(img/gradient-green-lg.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.decor-element-three {
+  position: absolute;
+  pointer-events: none;
+  width: 1170px;
+  aspect-ratio: 1 / 1;
+  top: 1550px;
+  left: -570px;
   opacity: 0.6;
 }
-/* DECOR ELEMENTS END */
+
+.decor-element-three > .texture {
+  z-index: 0;
+  position: absolute;
+  pointer-events: none;
+  background-image: url(img/gradient-blue-lg.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.decor-element-four {
+  position: absolute;
+  pointer-events: none;
+  width: 1900px;
+  aspect-ratio: 1 / 1;
+  right: -948px;
+  bottom: -800px;
+}
+
+.decor-element-four > .texture {
+  z-index: 0;
+  position: absolute;
+  pointer-events: none;
+  background-image: url(img/gradient-blue-lg.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.decor-element-four > .ui-cube {
+  z-index: 1;
+  position: absolute;
+  pointer-events: none;
+  width: 400px;
+  height: 400px;
+  aspect-ratio: 1 / 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(calc(-50% - 225px), calc(-50% - 106px)) rotate(-47deg);
+  --fill-op: 0.4;
+  --stroke-op: 0.8;
+}
+
+.decor-element-five {
+  position: absolute;
+  pointer-events: none;
+  width: 700px;
+  aspect-ratio: 1 / 1;
+  top: 211px;
+  left: 34px;
+}
+
+.decor-element-five > .ui-cube {
+  z-index: 1;
+  position: absolute;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-17.31deg);
+  --fill-op: 0.2;
+  --stroke-op: 0.4;
+}
+
+.decor-element-six {
+  position: absolute;
+  pointer-events: none;
+  width: 400px;
+  aspect-ratio: 1 / 1;
+  top: 1680px;
+  right: -115px;
+}
+
+.decor-element-six > .ui-cube {
+  z-index: 1;
+  position: absolute;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(50.27deg);
+  --fill-op: 0.5;
+  --stroke-op: 0.8;
+}
+
+.decor-element-seven {
+  position: absolute;
+  pointer-events: none;
+  width: 600px;
+  aspect-ratio: 1 / 1;
+  left: -140px;
+  bottom: 110px;
+}
+
+.decor-element-seven > .ui-cube {
+  z-index: 1;
+  position: absolute;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-17.31deg);
+  --fill-op: 0.7;
+  --stroke-op: 0.9;
+}
+
+.decor-element-eight {
+  position: absolute;
+  pointer-events: none;
+  width: 200px;
+  aspect-ratio: 1 / 1;
+  right: 221px;
+  bottom: 831px;
+}
+
+.decor-element-eight > .ui-cube {
+  z-index: 1;
+  position: absolute;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(14.87deg);
+  --fill-op: 0.2;
+  --stroke-op: 0.9;
+}
