@@ -46,7 +46,7 @@ async function switchLang(lang) {
     }
   });
 
-  // 2. Оновлюємо плейсхолдери [data-i18n-placeholder]
+  // 2. Оновлюємо плейсхолдери
   document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
     let rawKey = el.getAttribute("data-i18n-placeholder");
     let value = getTranslationValue(translate, rawKey, lang);
@@ -68,17 +68,14 @@ function updateSpanLang(lang) {
   }
 }
 
-// Функция раскрытия/сворачивания описания
 function toggleDescription(button) {
   const actualBlockWrap = button.closest(".bl-r");
   const block = actualBlockWrap.querySelector(".bl-text-wrap");
   const isShow = block.classList.toggle("show");
 
-  // Ключ перевода в зависимости от состояния
   const key = isShow ? "works_btn_more_hide" : "works_btn_more";
   button.setAttribute("data-i18n", key);
 
-  // Подтягиваем переведённый текст
   const currentLang = localStorage.getItem("selectedLang") || "uk";
   const translate = translationsCache[currentLang];
 
@@ -145,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Навешивание обработчиков на кнопки "Більше / Згорнути"
+  // "Більше / Згорнути"
   const textMoreButtons = document.querySelectorAll(".text-more");
   textMoreButtons.forEach((button) => {
     button.addEventListener("click", function () {
@@ -154,13 +151,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Бургер меню
 const burgMenu = document.getElementById("burgMenu");
-const navigation = document.getElementById("navigation");
+const navMenu = document.getElementById("navigation");
 const languageMenu = document.querySelector(".language");
 
 burgMenu.addEventListener("click", function () {
   burgMenu.classList.toggle("open");
-  navigation.classList.toggle("open");
+  navMenu.classList.toggle("open");
   languageMenu.classList.toggle("show");
 });
 
@@ -189,7 +187,9 @@ window.addEventListener("resize", function () {
 
 const wrapPages = document.getElementById("wrapPages");
 const linkHomePage = document.getElementById("linkHomePage");
+const linkAboutMe = document.getElementById("linkAboutMe");
 const linkWorkPage = document.getElementById("linkWorkPage");
+const linkContactMe = document.getElementById("linkContactMe");
 const homepage = document.getElementById("homepage");
 const workpage = document.getElementById("workpage");
 
@@ -202,6 +202,12 @@ if (wrapPages) {
     }
   }
 
+  const closeBurgNav = () => {
+    burgMenu.classList.remove("open");
+    navMenu.classList.remove("open");
+    languageMenu.classList.remove("show");
+  };
+
   linkWorkPage.addEventListener("click", function () {
     if (linkWorkPage.classList.contains("view")) return;
 
@@ -210,7 +216,44 @@ if (wrapPages) {
     wrapPages.classList.add("is-work");
 
     updatePageHeight();
+
+    setTimeout(closeBurgNav, 100);
   });
+
+  function scrollToSection(linkElement, sectionId) {
+    linkElement.addEventListener("click", function (e) {
+      e.preventDefault();
+      let section = document.getElementById(sectionId);
+
+      if (!section) return;
+      if (window.innerWidth <= 700) {
+        closeBurgNav();
+      }
+
+      const doScroll = () => {
+        let offset = 80;
+        let targetPosition = section.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth",
+        });
+      };
+
+      if (wrapPages.classList.contains("is-work")) {
+        linkHomePage.classList.add("view");
+        linkWorkPage.classList.remove("view");
+        wrapPages.classList.remove("is-work");
+        updatePageHeight();
+
+        setTimeout(doScroll, 500);
+      } else {
+        doScroll();
+      }
+    });
+  }
+
+  scrollToSection(linkAboutMe, "aboutMe");
+  scrollToSection(linkContactMe, "contactMe");
 
   linkHomePage.addEventListener("click", function () {
     if (linkHomePage.classList.contains("view")) return;
@@ -220,6 +263,8 @@ if (wrapPages) {
     wrapPages.classList.remove("is-work");
 
     updatePageHeight();
+
+    setTimeout(closeBurgNav, 100);
   });
 
   // Слідкуємо за змінами восокості сторінок

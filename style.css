@@ -113,10 +113,6 @@ html.theme-changing body *:not(.theme-control):not(.theme-control *)::after {
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 a {
   text-decoration: none;
 }
@@ -947,7 +943,7 @@ main {
 }
 
 .nav-wrap > nav > ul > li > a.view {
-  color: var(--text);
+  color: var(--navClick);
 }
 
 .nav-wrap > nav > ul > li > a::before {
