@@ -249,16 +249,16 @@
 
   .decor-element-seven {
     width: clamp(350px, 23.0769px + 40.0641vw, 600px);
-    left: -104px;
-    bottom: 263px;
+    left: clamp(-140px, -56.9231px + -5.7692vw, -104px);
+    bottom: clamp(110px, 400.7692px + -20.1923vw, 236px);
   }
 
   /* ELEMENT EIGHT */
 
   .decor-element-eight {
     width: clamp(140px, 61.5385px + 9.6154vw, 200px);
-    right: 40px;
-    bottom: 908px;
+    right: clamp(40px, -196.6923px + 29.0064vw, 221px);
+    bottom: clamp(831px, 1008.6923px + -12.3397vw, 908px);
   }
 
   .decor-element-eight > .ui-cube {

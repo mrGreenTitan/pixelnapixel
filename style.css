@@ -1188,7 +1188,6 @@ main {
   position: absolute;
   pointer-events: none;
   width: 400px;
-  height: 400px;
   aspect-ratio: 1 / 1;
   left: 50%;
   top: 50%;
