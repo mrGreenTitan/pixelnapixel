@@ -294,18 +294,17 @@
   /* ELEMENT TWO WORK */
 
   .decor-element-two.is-work {
-    width: 1140px;
-    top: clamp(2050px, 1635.3659px + 50.813vw, 2300px);
-    left: clamp(-560px, -609.7561px + 6.0976vw, -530px);
+    top: 2300px;
+    left: -530px;
     opacity: 0.8;
   }
 
   /* ELEMENT THREE WORK */
 
   .decor-element-three.is-work {
-    width: clamp(940px, 459.0244px + 58.9431vw, 1230px);
-    top: clamp(2610px, 2377.8049px + 28.4553vw, 2750px);
-    left: clamp(-470px, -503.1707px + 4.065vw, -450px);
+    width: 1230px;
+    top: 2750px;
+    left: -470px;
   }
 
   .decor-element-three.is-work > .ui-cube {
@@ -315,16 +314,16 @@
   /* ELEMENT FOUR WORK */
 
   .decor-element-four.is-work {
-    width: clamp(1110px, 549.4146px + 68.6992vw, 1448px);
-    right: clamp(-530px, -397.0732px + -10.1626vw, -480px);
-    bottom: clamp(-770px, 107.3171px + -67.0732vw, -440px);
+    width: 1480px;
+    right: -530px;
+    bottom: -770px;
   }
 
   .decor-element-four.is-work > .ui-cube {
     z-index: 0;
-    width: clamp(200px, -81.9512px + 34.5528vw, 370px);
-    transform: translate(calc(-50% - clamp(30px, -36.3415px + 8.1301vw, 70px)), calc(-50% - clamp(-40px, -504.3902px + 56.9106vw, 240px))) rotate(-99.52deg);
-    --fill-op: 0.2;
+    width: 370px;
+    transform: translate(calc(-50% - 70px), calc(-50% - 240px)) rotate(-99.52deg);
+    --fill-op: 0.1;
     --stroke-op: 1;
   }
 
@@ -333,8 +332,8 @@
   .decor-element-five.is-work {
     z-index: 0;
     width: 200px;
-    top: clamp(965px, 830.6585px + 16.4634vw, 1046px);
-    left: clamp(-102px, -493.4146px + 47.9675vw, 134px);
+    top: 1046px;
+    left: 134px;
   }
 
   .decor-element-five.is-work > .ui-cube {
@@ -348,8 +347,8 @@
   .decor-element-six.is-work {
     z-index: 0;
     width: 300px;
-    top: clamp(1896px, 1448.1951px + 54.878vw, 2166px);
-    right: clamp(-105px, -506.3659px + 49.187vw, 137px);
+    top: 2166px;
+    right: 137px;
   }
 
   .decor-element-six.is-work > .ui-cube {
@@ -363,9 +362,9 @@
   .decor-element-seven.is-work {
     z-index: 0;
     width: 170px;
-    left: clamp(-18px, -480.7317px + 56.7073vw, 261px);
+    left: 261px;
     right: unset;
-    bottom: clamp(489px, 221.9756px + 32.7236vw, 650px);
+    bottom: 650px;
   }
 
   .decor-element-seven.is-work > .ui-cube {
@@ -379,9 +378,9 @@
   .decor-element-eight.is-work {
     z-index: 0;
     width: 300px;
-    right: -29px;
+    right: 247px;
     left: unset;
-    bottom: 1619px;
+    bottom: 1726px;
   }
 
   .decor-element-eight.is-work > .ui-cube {
@@ -393,15 +392,15 @@
   /* ELEMENT NINE WORK */
 
   .decor-element-nine.is-work {
-    width: clamp(1420px, 540.9756px + 107.7236vw, 1950px);
-    top: clamp(3500px, 3052.1951px + 54.878vw, 3770px);
-    right: clamp(-760px, -440.9756px + -24.3902vw, -640px);
+    width: 1950px;
+    top: 3770px;
+    right: -760px;
   }
 
   .decor-element-nine.is-work > .ui-cube {
     z-index: 0;
     width: 250px;
-    transform: translate(calc(-50% - clamp(93px, 154.1463px + -4.6748vw, 116px)), calc(-50% - clamp(-53px, -205.5854px + 18.6992vw, 39px))) rotate(43.18deg);
+    transform: translate(calc(-50% - 93px), calc(-50% - 39px)) rotate(43.18deg);
     --fill-op: 0.8;
     --stroke-op: 1;
   }
@@ -409,16 +408,16 @@
   /* ELEMENT TEN WORK */
 
   .decor-element-ten.is-work {
-    width: clamp(1010px, 761.2195px + 30.4878vw, 1160px);
-    left: clamp(-500px, -732.1951px + 28.4553vw, -360px);
-    bottom: 2130px;
+    width: 1160px;
+    left: -360px;
+    bottom: 2190px;
     opacity: 0.8;
   }
 
   .decor-element-ten.is-work > .ui-cube {
     z-index: 1;
     width: 200px;
-    transform: translate(calc(-50% - -6px), calc(-50% - clamp(-43px, -95.3077px + 6.4103vw, -3px))) rotate(18.52deg);
+    transform: translate(calc(-50% - -6px), calc(-50% - -3px)) rotate(18.52deg);
     --fill-op: 0.6;
     --stroke-op: 1;
   }

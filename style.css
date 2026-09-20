@@ -1341,7 +1341,7 @@ main {
   background-image: url(img/gradient-green-lg.webp);
 }
 
-.decor-element-four > .ui-cube {
+.decor-element-four.is-work > .ui-cube {
   z-index: 0;
   width: 700px;
   aspect-ratio: 1 / 1;
@@ -1356,7 +1356,6 @@ main {
 
 .decor-element-five.is-work {
   z-index: 0;
-
   width: 300px;
   top: 641px;
   left: -146px;
@@ -1385,7 +1384,7 @@ main {
 
 /* ELEMENT SEVEN WORK*/
 
-.decor-element-seven {
+.decor-element-seven.is-work {
   z-index: 0;
   width: 300px;
   left: unset;
@@ -1393,7 +1392,7 @@ main {
   bottom: 1540px;
 }
 
-.decor-element-seven > .ui-cube {
+.decor-element-seven.is-work > .ui-cube {
   transform: translate(-50%, -50%) rotate(-19.8deg);
   --fill-op: 0.8;
   --stroke-op: 0.9;
