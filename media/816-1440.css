@@ -178,6 +178,94 @@
   }
 
   /* WORK PAGE END */
+
+  /* DECOR ELEMENTS START */
+
+  /* ELEMENT ONE */
+
+  .decor-element-one {
+    width: clamp(1600px, 1469.2308px + 16.0256vw, 1700px);
+    top: clamp(-812px, -1021.2308px + 25.641vw, -652px);
+    right: clamp(-738px, -829.5385px + 11.2179vw, -668px);
+  }
+
+  .decor-element-one > .ui-cube {
+    width: clamp(400px, 7.6923px + 48.0769vw, 700px);
+    transform: translate(calc(-50% + clamp(-101px, -103.6154px + 0.3205vw, -99px)), calc(-50% + clamp(-226px, 265.5385px + -34.1346vw, -13px))) rotate(-88deg);
+    --stroke-op: clamp(0.3px, 1.4538px + -0.0801vw, 0.8px);
+  }
+
+  /* ELEMENT TWO */
+
+  .decor-element-two {
+    width: clamp(1220px, 906.1538px + 38.4615vw, 1460px);
+    top: clamp(720px, 615.3846px + 12.8205vw, 800px);
+    left: clamp(-680px, -610.7692px + -4.8077vw, -650px);
+  }
+
+  /* ELEMENT THREE */
+
+  .decor-element-three {
+    width: clamp(890px, 523.8462px + 44.8718vw, 1170px);
+    top: clamp(1370px, 1134.6154px + 28.8462vw, 1550px);
+    left: clamp(-570px, -316.1538px + -17.6282vw, -460px);
+  }
+
+  /* ELEMENT FOUR */
+
+  .decor-element-four {
+    width: clamp(1500px, 976.9231px + 64.1026vw, 1900px);
+    right: clamp(-948px, -417.2308px + -36.859vw, -718px);
+    bottom: clamp(-800px, -315.3846px + -33.6538vw, -590px);
+  }
+
+  .decor-element-four > .ui-cube {
+    width: clamp(280px, 123.0769px + 19.2308vw, 400px);
+    transform: translate(calc(-50% - clamp(138px, 24.2308px + 13.9423vw, 225px)), calc(-50% - clamp(106px, 175.2308px + -4.8077vw, 136px))) rotate(-47deg);
+  }
+
+  /* ELEMENT FIVE */
+
+  .decor-element-five {
+    width: clamp(430px, 76.9231px + 43.2692vw, 700px);
+    top: clamp(211px, 372.5385px + -11.2179vw, 281px);
+    left: clamp(19px, -0.6154px + 2.4038vw, 34px);
+  }
+
+  /* ELEMENT SIX */
+
+  .decor-element-six {
+    width: clamp(250px, 53.8462px + 24.0385vw, 400px);
+    top: clamp(1335px, 883.8462px + 55.2885vw, 1680px);
+    right: clamp(-115px, -34.2308px + -5.609vw, -80px);
+  }
+
+  .decor-element-six > .ui-cube {
+    transform: translate(-50%, -50%) rotate(50.27deg);
+    --stroke-op: clamp(0.8px, 1.2615px + -0.0321vw, 1px);
+  }
+
+  /* ELEMENT SEVEN */
+
+  .decor-element-seven {
+    width: clamp(350px, 23.0769px + 40.0641vw, 600px);
+    left: -104px;
+    bottom: 263px;
+  }
+
+  /* ELEMENT EIGHT */
+
+  .decor-element-eight {
+    width: clamp(140px, 61.5385px + 9.6154vw, 200px);
+    right: 40px;
+    bottom: 908px;
+  }
+
+  .decor-element-eight > .ui-cube {
+    --stroke-op: 1;
+  }
+
+  /* DECOR ELEMENTS END */
 }
 
 @media (min-width: 816px) and (max-width: 1308px) {

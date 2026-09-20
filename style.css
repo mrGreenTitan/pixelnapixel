@@ -1065,11 +1065,13 @@ main {
 
 /* DECOR ELEMENTS START */
 
+/* ELEMENT ONE */
+
 .decor-element-one {
   position: absolute;
   pointer-events: none;
   width: 1700px;
-  height: 1700px;
+  aspect-ratio: 1 / 1;
   top: -652px;
   right: -668px;
 }
@@ -1094,7 +1096,6 @@ main {
   position: absolute;
   pointer-events: none;
   width: 700px;
-  height: 700px;
   aspect-ratio: 1 / 1;
   left: 50%;
   top: 50%;
@@ -1102,6 +1103,8 @@ main {
   --fill-op: 0.3;
   --stroke-op: 0.3;
 }
+
+/* ELEMENT TWO */
 
 .decor-element-two {
   position: absolute;
@@ -1127,6 +1130,8 @@ main {
   transform: translate(-50%, -50%);
 }
 
+/* ELEMENT THREE */
+
 .decor-element-three {
   position: absolute;
   pointer-events: none;
@@ -1151,6 +1156,8 @@ main {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
+/* ELEMENT FOUR */
 
 .decor-element-four {
   position: absolute;
@@ -1190,6 +1197,8 @@ main {
   --stroke-op: 0.8;
 }
 
+/* ELEMENT FIVE */
+
 .decor-element-five {
   position: absolute;
   pointer-events: none;
@@ -1211,6 +1220,8 @@ main {
   --fill-op: 0.2;
   --stroke-op: 0.4;
 }
+
+/* ELEMENT SIX */
 
 .decor-element-six {
   position: absolute;
@@ -1235,6 +1246,8 @@ main {
   --stroke-op: 0.8;
 }
 
+/* ELEMENT SEVEN */
+
 .decor-element-seven {
   position: absolute;
   pointer-events: none;
@@ -1257,6 +1270,8 @@ main {
   --fill-op: 0.7;
   --stroke-op: 0.9;
 }
+
+/* ELEMENT EIGHT */
 
 .decor-element-eight {
   position: absolute;
