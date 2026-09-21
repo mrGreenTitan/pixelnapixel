@@ -327,93 +327,122 @@
   /* ELEMENT ONE */
 
   .doco-one {
-    width: 832px;
-    top: -354px;
-    right: -357px;
+    width: clamp(622px, 486.2424px + 42.4242vw, 832px);
+    top: clamp(-354px, -233.8081px + -14.7475vw, -281px);
+    right: clamp(-357px, -241.7475px + -14.1414vw, -287px);
+  }
+
+  .doco-one::before {
+    background-image: url(/img/texture-one-sm.webp);
+  }
+
+  .doco-one > .grad {
+    width: clamp(710px, 393.2323px + 98.9899vw, 1200px);
+    background: radial-gradient(circle, rgba(120, 12, 255, 0.9) 4%, rgba(120, 12, 255, 0.52) 20%, rgba(120, 12, 255, 0.35) 35%, rgba(120, 12, 255, 0.15) 55%, rgba(120, 12, 255, 0) 75%);
   }
 
   .doco-one > .ui-cube {
-    width: 400px;
-    transform: translate(calc(-50% - 103px), calc(-50% - 56px)) rotate(-88deg);
+    z-index: 1;
+    width: clamp(250px, 153.0303px + 30.303vw, 400px);
+    transform: translate(calc(-50% - clamp(77px, 60.1919px + 5.2525vw, 103px)), calc(-50% - clamp(32px, 16.4848px + 4.8485vw, 56px))) rotate(-88deg);
     --fill-op: 0.3;
-    --stroke-op: 0.2;
+    --stroke-op: 0.8;
   }
 
   /* ELEMENT TWO */
 
   .doco-two {
-    width: clamp(430px, 76.9231px + 43.2692vw, 700px);
-    top: 280px;
-    left: 18px;
+    width: clamp(170px, 1.9192px + 52.5253vw, 430px);
+    top: clamp(171px, 100.5354px + 22.0202vw, 280px);
+    left: clamp(8px, 1.5354px + 2.0202vw, 18px);
+  }
+
+  .doco-two > .ui-cube {
+    --stroke-op: 0.6;
   }
 
   /* ELEMENT THREE */
 
   .doco-three {
-    width: 942px;
-    top: 830px;
-    left: -540px;
+    width: clamp(422px, 47.0505px + 117.1717vw, 1002px);
+    top: clamp(626px, 397.1515px + 71.5152vw, 980px);
+    left: clamp(-430px, -51.3131px + -46.4646vw, -200px);
+  }
+
+  .doco-three::before {
+    background-image: url(/img/texture-two-sm.webp);
   }
 
   .doco-three > .grad {
-    width: 1100px;
+    width: clamp(460px, 46.2626px + 129.2929vw, 1100px);
   }
 
   /* ELEMENT FOUR */
 
   .doco-four {
-    width: 640px;
-    top: 1430px;
-    left: -320px;
+    width: clamp(300px, 131.9192px + 52.5253vw, 560px);
+    top: clamp(890px, 372.8283px + 161.6162vw, 1690px);
+    left: clamp(-260px, -45.9596px + -26.2626vw, -130px);
+  }
+
+  .doco-four::before {
+    background-image: url(/img/texture-three-sm.webp);
   }
 
   .doco-four > .grad {
-    width: 490px;
+    width: clamp(450px, 217.2727px + 72.7273vw, 810px);
+    background: radial-gradient(circle, rgba(55, 0, 255, 0.6) 0%, rgba(55, 0, 255, 0.52) 15%, rgba(55, 0, 255, 0.35) 35%, rgba(55, 0, 255, 0.15) 55%, rgba(55, 0, 255, 0) 75%);
   }
 
   /* ELEMENT FIVE */
 
   .doco-five {
-    width: 250px;
-    top: 1345px;
-    right: -82px;
+    width: clamp(100px, 3.0303px + 30.303vw, 250px);
+    top: clamp(857px, 409.6465px + 139.798vw, 1549px);
+    right: clamp(-82px, -1.3232px + -9.899vw, -33px);
   }
 
   .doco-five > .ui-cube {
     transform: rotate(36.09deg);
+    --stroke-op: 1;
   }
 
   /* ELEMENT SIX */
 
   .doco-six {
-    width: 140px;
-    right: 36px;
-    bottom: 910px;
+    width: clamp(80px, 41.2121px + 12.1212vw, 140px);
+    right: clamp(6px, -13.3939px + 6.0606vw, 36px);
+    bottom: clamp(630px, 448.9899px + 56.5657vw, 910px);
   }
 
   /* ELEMENT SEVEN */
 
   .doco-seven {
-    width: 350px;
-    left: -100px;
-    bottom: 265px;
+    width: clamp(100px, -61.6162px + 50.5051vw, 350px);
+    left: clamp(-100px, -17.6768px + -10.101vw, -50px);
+    bottom: clamp(265px, 451.0505px + -22.8283vw, 378px);
   }
 
   /* ELEMENT EIGHT */
 
   .doco-eight {
-    width: 1012px;
-    right: -440px;
-    bottom: -350px;
+    width: clamp(522px, 205.2323px + 98.9899vw, 1012px);
+    right: clamp(-440px, -127.1717px + -38.3838vw, -250px);
+    bottom: clamp(-350px, -185.3535px + -20.202vw, -250px);
+  }
+
+  .doco-eight::before {
+    background-image: url(/img/texture-one-sm.webp);
   }
 
   .doco-eight > .grad {
-    width: 1270px;
+    width: clamp(729px, 379.2626px + 109.2929vw, 1270px);
+    background: radial-gradient(circle, rgba(55, 0, 255, 0.6) 0%, rgba(55, 0, 255, 0.6) 15%, rgba(55, 0, 255, 0.35) 35%, rgba(55, 0, 255, 0.15) 45%, rgba(55, 0, 255, 0) 75%);
   }
 
   .doco-eight > .ui-cube {
-    width: 280px;
-    transform: translate(calc(-50% - 104px), calc(-50% - 31px)) rotate(-47.16deg);
+    width: clamp(150px, 65.9596px + 26.2626vw, 280px);
+    transform: translate(calc(-50% - 33px), calc(-50% - clamp(28px, 26.0606px + 0.6061vw, 31px))) rotate(-47.16deg);
   }
 
   /* DECOR ELEMENTS END */

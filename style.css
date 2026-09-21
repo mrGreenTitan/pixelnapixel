@@ -1112,7 +1112,7 @@ main {
   top: 50%;
   transform: translate(calc(-50% - 102px), calc(-50% - 178px)) rotate(-88deg);
   --fill-op: 0.3;
-  --stroke-op: 0.2;
+  --stroke-op: 0.7;
 }
 
 /* ELEMENT TWO */

@@ -193,7 +193,7 @@
     width: clamp(400px, 7.6923px + 48.0769vw, 700px);
     transform: translate(calc(-50% - clamp(102px, 104.3077px + -0.1603vw, 103px)), calc(-50% - clamp(56px, -103.5385px + 19.5513vw, 178px))) rotate(-88deg);
     --fill-op: 0.3;
-    --stroke-op: 0.2;
+    --stroke-op: 0.7;
   }
 
   /* ELEMENT TWO */
