@@ -326,108 +326,94 @@
 
   /* ELEMENT ONE */
 
-  .decor-element-one {
-    width: clamp(790px, 621.9192px + 52.5253vw, 1050px);
-    top: clamp(-482px, -366.7475px + -14.1414vw, -412px);
-    right: clamp(-478px, -362.7475px + -14.1414vw, -408px);
+  .doco-one {
+    width: 832px;
+    top: -354px;
+    right: -357px;
   }
 
-  .decor-element-one > .texture {
-    background-image: url(../img/gradient-violet-sm.webp);
-  }
-
-  .decor-element-one > .ui-cube {
-    z-index: 0;
-    width: clamp(250px, 153.0303px + 30.303vw, 400px);
-    transform: translate(calc(-50% - clamp(115px, 113.7071px + 0.404vw, 117px)), calc(-50% - clamp(6px, -35.3737px + 12.9293vw, 70px))) rotate(-88deg);
+  .doco-one > .ui-cube {
+    width: 400px;
+    transform: translate(calc(-50% - 103px), calc(-50% - 56px)) rotate(-88deg);
     --fill-op: 0.3;
-    --stroke-op: 0.8;
+    --stroke-op: 0.2;
   }
 
   /* ELEMENT TWO */
 
-  .decor-element-two {
-    width: clamp(590px, 182.7273px + 127.2727vw, 1220px);
-    top: clamp(560px, 333.7374px + 70.7071vw, 910px);
-    left: clamp(-650px, -57.2727px + -72.7273vw, -290px);
-  }
-
-  .decor-element-two > .texture {
-    background-image: url(../img/gradient-green-sm.webp);
+  .doco-two {
+    width: clamp(430px, 76.9231px + 43.2692vw, 700px);
+    top: 280px;
+    left: 18px;
   }
 
   /* ELEMENT THREE */
 
-  .decor-element-three {
-    width: clamp(600px, 205.6566px + 123.2323vw, 1210px);
-    top: clamp(730px, 309.798px + 131.3131vw, 1380px);
-    left: clamp(-590px, -79.596px + -62.6263vw, -280px);
-    opacity: 1;
+  .doco-three {
+    width: 942px;
+    top: 830px;
+    left: -540px;
   }
 
-  .decor-element-three > .texture {
-    background-image: url(../img/gradient-blue-sm.webp);
+  .doco-three > .grad {
+    width: 1100px;
   }
 
   /* ELEMENT FOUR */
 
-  .decor-element-four {
-    width: clamp(1150px, 665.1515px + 151.5152vw, 1900px);
-    right: clamp(-938px, -397.9596px + -66.2626vw, -610px);
-    bottom: clamp(-820px, -161.4141px + -80.8081vw, -420px);
+  .doco-four {
+    width: 640px;
+    top: 1430px;
+    left: -320px;
   }
 
-  .decor-element-four > .texture {
-    background-image: url(../img/gradient-blue-sm.webp);
-  }
-
-  .decor-element-four > .ui-cube {
-    z-index: -1;
-    width: clamp(150px, 65.9596px + 26.2626vw, 280px);
-    transform: translate(calc(-50% - clamp(103px, 70.6768px + 10.101vw, 153px)), calc(-50% - clamp(-4px, -110.6667px + 33.3333vw, 161px))) rotate(-47deg);
-    --fill-op: 0.4;
-    --stroke-op: 1;
+  .doco-four > .grad {
+    width: 490px;
   }
 
   /* ELEMENT FIVE */
 
-  .decor-element-five {
-    width: clamp(170px, 1.9192px + 52.5253vw, 430px);
-    top: clamp(171px, 99.8889px + 22.2222vw, 281px);
-    left: clamp(9px, 2.5354px + 2.0202vw, 19px);
+  .doco-five {
+    width: 250px;
+    top: 1345px;
+    right: -82px;
+  }
+
+  .doco-five > .ui-cube {
+    transform: rotate(36.09deg);
   }
 
   /* ELEMENT SIX */
 
-  .decor-element-six {
-    width: clamp(100px, 3.0303px + 30.303vw, 250px);
-    top: clamp(859px, 411px + 140vw, 1552px);
-    right: clamp(-80px, -14.1414px + -8.0808vw, -40px);
-  }
-
-  .decor-element-six > .ui-cube {
-    transform: translate(-50%, -50%) rotate(50.27deg);
-    --stroke-op: 1;
+  .doco-six {
+    width: 140px;
+    right: 36px;
+    bottom: 910px;
   }
 
   /* ELEMENT SEVEN */
 
-  .decor-element-seven {
-    width: clamp(100px, -61.6162px + 50.5051vw, 350px);
-    left: clamp(-140px, 11.4747px + -18.5859vw, -48px);
-    bottom: clamp(263px, 450.697px + -23.0303vw, 377px);
+  .doco-seven {
+    width: 350px;
+    left: -100px;
+    bottom: 265px;
   }
 
   /* ELEMENT EIGHT */
 
-  .decor-element-eight {
-    width: clamp(80px, 41.2121px + 12.1212vw, 140px);
-    right: 40px;
-    bottom: 908px;
+  .doco-eight {
+    width: 1012px;
+    right: -440px;
+    bottom: -350px;
   }
 
-  .decor-element-eight > .ui-cube {
-    --stroke-op: 1;
+  .doco-eight > .grad {
+    width: 1270px;
+  }
+
+  .doco-eight > .ui-cube {
+    width: 280px;
+    transform: translate(calc(-50% - 104px), calc(-50% - 31px)) rotate(-47.16deg);
   }
 
   /* DECOR ELEMENTS END */

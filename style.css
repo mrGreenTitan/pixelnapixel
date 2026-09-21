@@ -1067,428 +1067,279 @@ main {
 
 /* ELEMENT ONE */
 
-.decor-element-one {
-  position: absolute;
+.doco-one {
+  z-index: 0;
   pointer-events: none;
-  width: 1700px;
-  aspect-ratio: 1 / 1;
-  top: -652px;
-  right: -668px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 972px;
+  aspect-ratio: 872 / 805;
+  top: -304px;
+  right: -305px;
 }
 
-.decor-element-one > .texture {
-  z-index: 0;
+.doco-one::before {
+  content: "";
   position: absolute;
-  pointer-events: none;
-  background-image: url(img/gradient-violet-lg.webp);
+  inset: 0;
+  background-image: url(img/texture-one-lg.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  width: 100%;
-  height: 100%;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.doco-one > .grad {
+  position: absolute;
+  z-index: 1;
+  width: 1200px;
+  aspect-ratio: 1 / 1;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(120, 12, 255, 0.6) 0%, rgba(120, 12, 255, 0.52) 15%, rgba(120, 12, 255, 0.35) 35%, rgba(120, 12, 255, 0.15) 55%, rgba(120, 12, 255, 0) 75%);
 }
 
-.decor-element-one > .ui-cube {
-  z-index: -1;
+.doco-one > .ui-cube {
+  z-index: 0;
   position: absolute;
-  pointer-events: none;
   width: 700px;
   aspect-ratio: 1 / 1;
   left: 50%;
   top: 50%;
-  transform: translate(calc(-50% + -99px), calc(-50% + -226px)) rotate(-88deg);
+  transform: translate(calc(-50% - 102px), calc(-50% - 178px)) rotate(-88deg);
   --fill-op: 0.3;
-  --stroke-op: 0.3;
+  --stroke-op: 0.2;
 }
 
 /* ELEMENT TWO */
 
-.decor-element-two {
-  position: absolute;
-  pointer-events: none;
-  width: 1460px;
-  aspect-ratio: 1 / 1;
-  top: 800px;
-  left: -680px;
-}
-
-.decor-element-two > .texture {
+.doco-two {
   z-index: 0;
-  position: absolute;
   pointer-events: none;
-  background-image: url(img/gradient-green-lg.webp);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  width: 100%;
-  height: 100%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* ELEMENT THREE */
-
-.decor-element-three {
   position: absolute;
-  pointer-events: none;
-  width: 1170px;
-  aspect-ratio: 1 / 1;
-  top: 1550px;
-  left: -570px;
-  opacity: 0.6;
-}
-
-.decor-element-three > .texture {
-  z-index: 0;
-  position: absolute;
-  pointer-events: none;
-  background-image: url(img/gradient-blue-lg.webp);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  width: 100%;
-  height: 100%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.decor-element-three > .ui-cube {
-  display: none;
-}
-
-/* ELEMENT FOUR */
-
-.decor-element-four {
-  position: absolute;
-  pointer-events: none;
-  width: 1900px;
-  aspect-ratio: 1 / 1;
-  right: -948px;
-  bottom: -800px;
-}
-
-.decor-element-four > .texture {
-  z-index: 0;
-  position: absolute;
-  pointer-events: none;
-  background-image: url(img/gradient-blue-lg.webp);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  width: 100%;
-  height: 100%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.decor-element-four > .ui-cube {
-  z-index: 1;
-  position: absolute;
-  pointer-events: none;
-  width: 400px;
-  aspect-ratio: 1 / 1;
-  left: 50%;
-  top: 50%;
-  transform: translate(calc(-50% - 225px), calc(-50% - 106px)) rotate(-47deg);
-  --fill-op: 0.4;
-  --stroke-op: 0.8;
-}
-
-/* ELEMENT FIVE */
-
-.decor-element-five {
-  position: absolute;
-  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 700px;
   aspect-ratio: 1 / 1;
-  top: 211px;
-  left: 34px;
+  top: 209px;
+  left: 32px;
 }
 
-.decor-element-five > .ui-cube {
-  z-index: 1;
-  position: absolute;
-  pointer-events: none;
+.doco-two > .ui-cube {
+  z-index: 0;
   width: 100%;
-  height: 100%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(-17.31deg);
+  aspect-ratio: 1 / 1;
+  transform: rotate(-17.31deg);
+  transform-origin: center;
   --fill-op: 0.2;
   --stroke-op: 0.4;
 }
 
-/* ELEMENT SIX */
+/* ELEMENT THREE */
 
-.decor-element-six {
-  position: absolute;
+.doco-three {
+  z-index: 0;
   pointer-events: none;
-  width: 400px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1172px;
   aspect-ratio: 1 / 1;
-  top: 1680px;
-  right: -115px;
+  top: 910px;
+  left: -650px;
 }
 
-.decor-element-six > .ui-cube {
-  z-index: 1;
+.doco-three::before {
+  content: "";
   position: absolute;
-  pointer-events: none;
-  width: 100%;
-  height: 100%;
+  inset: 0;
+  background-image: url(img/texture-two-lg.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.doco-three > .grad {
+  position: absolute;
+  z-index: 1;
+  width: 1440px;
   aspect-ratio: 1 / 1;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%) rotate(50.27deg);
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.6) 0%, rgba(0, 255, 255, 0.52) 15%, rgba(0, 255, 255, 0.35) 35%, rgba(0, 255, 255, 0.15) 55%, rgba(0, 255, 255, 0) 75%);
+}
+
+/* ELEMENT FOUR */
+
+.doco-four {
+  z-index: -1;
+  pointer-events: none;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 830px;
+  aspect-ratio: 1 / 1;
+  top: 1690px;
+  left: -410px;
+}
+
+.doco-four::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(img/texture-three-lg.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.doco-four > .grad {
+  position: absolute;
+  z-index: 1;
+  width: 970px;
+  aspect-ratio: 1 / 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(55, 0, 255, 0.6) 0%, rgba(55, 0, 255, 0.52) 15%, rgba(55, 0, 255, 0.35) 35%, rgba(55, 0, 255, 0.15) 55%, rgba(55, 0, 255, 0) 75%);
+  opacity: 0.5;
+}
+
+/* ELEMENT FIVE */
+
+.doco-five {
+  z-index: 0;
+  pointer-events: none;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  aspect-ratio: 1 / 1;
+  top: 1677px;
+  right: -114px;
+}
+
+.doco-five > .ui-cube {
+  z-index: 0;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  transform: rotate(50.27deg);
+  transform-origin: center;
   --fill-op: 0.5;
+  --stroke-op: 0.8;
+}
+
+/* ELEMENT SIX */
+
+.doco-six {
+  z-index: 0;
+  pointer-events: none;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  aspect-ratio: 1 / 1;
+  right: 226px;
+  bottom: 830px;
+}
+
+.doco-six > .ui-cube {
+  z-index: 0;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  transform: rotate(14.87deg);
+  transform-origin: center;
+  --fill-op: 0.2;
   --stroke-op: 0.8;
 }
 
 /* ELEMENT SEVEN */
 
-.decor-element-seven {
-  position: absolute;
+.doco-seven {
+  z-index: 0;
   pointer-events: none;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 600px;
   aspect-ratio: 1 / 1;
-  left: -140px;
-  bottom: 110px;
+  left: -130px;
+  bottom: 195px;
 }
 
-.decor-element-seven > .ui-cube {
-  z-index: 1;
-  position: absolute;
-  pointer-events: none;
+.doco-seven > .ui-cube {
+  z-index: 0;
   width: 100%;
-  height: 100%;
   aspect-ratio: 1 / 1;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(-17.31deg);
+  transform: rotate(-17.31deg);
+  transform-origin: center;
   --fill-op: 0.7;
-  --stroke-op: 0.9;
+  --stroke-op: 0.8;
 }
 
 /* ELEMENT EIGHT */
 
-.decor-element-eight {
-  position: absolute;
+.doco-eight {
+  z-index: 0;
   pointer-events: none;
-  width: 200px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1012px;
   aspect-ratio: 1 / 1;
-  right: 221px;
-  bottom: 831px;
+  right: -470px;
+  bottom: -360px;
 }
 
-.decor-element-eight > .ui-cube {
+.doco-eight::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(img/texture-one-lg.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.doco-eight > .grad {
+  position: absolute;
+  z-index: 1;
+  width: 1400px;
+  aspect-ratio: 1 / 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(55, 0, 255, 1) 5%, rgba(55, 0, 255, 0.6) 20%, rgba(55, 0, 255, 0.35) 35%, rgba(55, 0, 255, 0.15) 55%, rgba(55, 0, 255, 0) 75%);
+}
+
+.doco-eight > .ui-cube {
   z-index: 1;
   position: absolute;
-  pointer-events: none;
-  width: 100%;
-  height: 100%;
+  width: 400px;
   aspect-ratio: 1 / 1;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%) rotate(14.87deg);
-  --fill-op: 0.2;
-  --stroke-op: 0.9;
-}
-
-/* WORK PAGE */
-
-/* ELEMENT TWO WORK */
-
-.decor-element-two.is-work {
-  top: 1140px;
-}
-
-/* ELEMENT THREE WORK */
-
-.decor-element-three.is-work {
-  width: 1230px;
-  top: 1900px;
-  left: -590px;
-}
-
-.decor-element-three.is-work > .ui-cube {
-  display: block;
-  z-index: 1;
-  position: absolute;
-  pointer-events: none;
-  width: 200px;
-  aspect-ratio: 1 / 1;
-  left: 50%;
-  top: 50%;
-  transform: translate(calc(-50% - -76px), calc(-50% - 176px)) rotate(-26.06deg);
-  --fill-op: 1;
-  --stroke-op: 1;
-}
-
-/* ELEMENT FOUR WORK */
-
-.decor-element-four.is-work {
-  width: 1900px;
-  right: -998px;
-  bottom: -950px;
-}
-
-.decor-element-four.is-work > .texture {
-  background-image: url(img/gradient-green-lg.webp);
-}
-
-.decor-element-four.is-work > .ui-cube {
-  z-index: 0;
-  width: 700px;
-  aspect-ratio: 1 / 1;
-  left: 50%;
-  top: 50%;
-  transform: translate(calc(-50% - 530px), calc(-50% - 320px)) rotate(-99.52deg);
-  --fill-op: 0.2;
-  --stroke-op: 0.7;
-}
-
-/* ELEMENT FIVE WORK */
-
-.decor-element-five.is-work {
-  z-index: 0;
-  width: 300px;
-  top: 641px;
-  left: -146px;
-}
-
-.decor-element-five.is-work > .ui-cube {
-  transform: translate(-50%, -50%) rotate(13.97deg);
+  transform: translate(calc(-50% - 191px), calc(-50% - 101px)) rotate(-47.16deg);
   --fill-op: 0.4;
   --stroke-op: 1;
 }
 
-/* ELEMENT SIX WORK */
-
-.decor-element-six.is-work {
-  z-index: 0;
-  width: 500px;
-  top: 1228px;
-  right: -55px;
-}
-
-.decor-element-six.is-work > .ui-cube {
-  transform: translate(-50%, -50%) rotate(-13.46deg);
-  --fill-op: 0.6;
-  --stroke-op: 1;
-}
-
-/* ELEMENT SEVEN WORK*/
-
-.decor-element-seven.is-work {
-  z-index: 0;
-  width: 300px;
-  left: unset;
-  right: -68px;
-  bottom: 1540px;
-}
-
-.decor-element-seven.is-work > .ui-cube {
-  transform: translate(-50%, -50%) rotate(-19.8deg);
-  --fill-op: 0.8;
-  --stroke-op: 0.9;
-}
-
-/* ELEMENT EIGHT WORK */
-
-.decor-element-eight.is-work {
-  width: 200px;
-  right: unset;
-  left: -88px;
-  bottom: 2753px;
-}
-
-.decor-element-eight.is-work > .ui-cube {
-  transform: translate(-50%, -50%) rotate(9.57deg);
-  --fill-op: 0.2;
-  --stroke-op: 1;
-}
-
-/* ELEMENT NINE WORK */
-
-.decor-element-nine.is-work {
-  display: block;
-  position: absolute;
-  pointer-events: none;
-  width: 1950px;
-  aspect-ratio: 1 / 1;
-  top: 2200px;
-  right: -960px;
-}
-
-.decor-element-nine.is-work > .texture {
-  z-index: 0;
-  position: absolute;
-  pointer-events: none;
-  background-image: url(img/gradient-violet-lg.webp);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  width: 100%;
-  height: 100%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.decor-element-nine.is-work > .ui-cube {
-  z-index: 1;
-  position: absolute;
-  pointer-events: none;
-  width: 300px;
-  aspect-ratio: 1 / 1;
-  left: 50%;
-  top: 50%;
-  transform: translate(calc(-50% - 93px), calc(-50% - 50px)) rotate(43.18deg);
-  --fill-op: 0.8;
-  --stroke-op: 1;
-}
-
-/* ELEMENT TEN WORK */
-
-.decor-element-ten.is-work {
-  display: block;
-  position: absolute;
-  pointer-events: none;
-  width: 1160px;
-  aspect-ratio: 1 / 1;
-  left: -570px;
-  bottom: 940px;
-}
-
-.decor-element-ten.is-work > .texture {
-  z-index: 0;
-  position: absolute;
-  pointer-events: none;
-  background-image: url(img/gradient-blue-lg.webp);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  width: 100%;
-  height: 100%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.decor-element-ten.is-work > .ui-cube {
-  z-index: 1;
-  position: absolute;
-  pointer-events: none;
-  width: 200px;
-  aspect-ratio: 1 / 1;
-  left: 50%;
-  top: 50%;
-  transform: translate(calc(-50% - -10px), calc(-50% - -23px)) rotate(18.52deg);
-  --fill-op: 0.6;
-  --stroke-op: 1;
-}
+/* DECOR ELEMENTS END */
