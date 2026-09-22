@@ -163,7 +163,7 @@ burgMenu.addEventListener("click", function () {
 });
 
 function updateTextBlockHeight(block) {
-  if (window.innerWidth >= 1308) {
+  if (window.innerWidth >= 1309) {
     block.style.maxHeight = "455px";
   } else if (window.innerWidth >= 816) {
     block.style.maxHeight = "245px";

@@ -446,6 +446,94 @@
   }
 
   /* DECOR ELEMENTS END */
+
+  /* ELEMENT ONE WORK PAGE */
+
+  .doco-work-one {
+    width: 200px;
+    top: 981px;
+    left: -100px;
+  }
+
+  /* ELEMENT TWO WORK PAGE */
+
+  .doco-work-two {
+    width: 300px;
+    top: 1873px;
+    right: -106px;
+  }
+
+  /* ELEMENT THREE WORK PAGE */
+
+  .doco-work-three {
+    width: 910px;
+    top: 2170px;
+    left: -460px;
+  }
+
+  .doco-work-three > .grad {
+    width: 1130px;
+  }
+
+  /* ELEMENT FOUR WORK PAGE */
+
+  .doco-work-four {
+    width: 630px;
+    top: 2750px;
+    left: -300px;
+  }
+
+  .doco-work-four > .grad {
+    width: 770px;
+  }
+
+  /* ELEMENT FIVE WORK PAGE */
+
+  .doco-work-five {
+    display: none;
+  }
+
+  /* ELEMENT SIX WORK PAGE */
+
+  /* ELEMENT SIX WORK PAGE */
+
+  .doco-work-six {
+    width: 850px;
+    top: 3830px;
+    right: -410px;
+  }
+
+  .doco-work-six > .grad {
+    width: 980px;
+  }
+
+  .doco-work-six > .ui-cube {
+    width: 250px;
+    transform: translate(calc(-50% - 49px), calc(-50% - -32px)) rotate(43.18deg);
+  }
+
+  /* ELEMENT SEVEN WORK PAGE */
+
+  .doco-work-seven {
+    display: none;
+    width: 200px;
+    top: 4323px;
+    left: 225px;
+  }
+
+  /* ELEMENT EIGHT WORK PAGE */
+
+  .doco-work-eight {
+    width: 300px;
+    right: -25px;
+    bottom: 1620px;
+  }
+
+  .doco-work-eight > .ui-cube {
+    transform: rotate(-13.46deg);
+    --fill-op: 0.6;
+    --stroke-op: 0.8;
+  }
 }
 
 @media (min-width: 700px) and (max-width: 815px) {

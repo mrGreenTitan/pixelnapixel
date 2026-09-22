@@ -1342,4 +1342,266 @@ main {
   --stroke-op: 1;
 }
 
+/* ELEMENT ONE WORK PAGE */
+
+.doco-two.vis-no,
+.doco-three.vis-no,
+.doco-four.vis-no,
+.doco-five.vis-no,
+.doco-six.vis-no,
+.doco-seven.vis-no,
+.doco-eight.vis-no {
+  display: none;
+}
+
+.doco-work-one {
+  z-index: 0;
+  pointer-events: none;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  aspect-ratio: 1 / 1;
+  top: 645px;
+  left: -149px;
+}
+
+.doco-work-one > .ui-cube {
+  z-index: 0;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  transform: rotate(13.97deg);
+  transform-origin: center;
+  --fill-op: 0.4;
+  --stroke-op: 0.8;
+}
+
+/* ELEMENT TWO WORK PAGE */
+
+.doco-work-two {
+  z-index: 0;
+  pointer-events: none;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  aspect-ratio: 1 / 1;
+  top: 1230px;
+  right: -60px;
+}
+
+.doco-work-two > .ui-cube {
+  z-index: 0;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  transform: rotate(-13.46deg);
+  transform-origin: center;
+  --fill-op: 0.6;
+  --stroke-op: 0.8;
+}
+
+/* ELEMENT THREE WORK PAGE */
+
+.doco-work-three {
+  z-index: 0;
+  pointer-events: none;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1270px;
+  aspect-ratio: 1 / 1;
+  top: 1300px;
+  left: -580px;
+}
+
+.doco-work-three::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(img/texture-two-lg.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.doco-work-three > .grad {
+  position: absolute;
+  z-index: 1;
+  width: 1440px;
+  aspect-ratio: 1 / 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.6) 0%, rgba(0, 255, 255, 0.52) 15%, rgba(0, 255, 255, 0.35) 35%, rgba(0, 255, 255, 0.15) 55%, rgba(0, 255, 255, 0) 75%);
+}
+
+/* ELEMENT FOUR WORK PAGE */
+
+.doco-work-four {
+  z-index: -1;
+  pointer-events: none;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 830px;
+  aspect-ratio: 1 / 1;
+  top: 2040px;
+  left: -410px;
+}
+
+.doco-work-four::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(img/texture-three-lg.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.doco-work-four > .grad {
+  position: absolute;
+  z-index: 1;
+  width: 1040px;
+  aspect-ratio: 1 / 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(55, 0, 255, 0.6) 0%, rgba(55, 0, 255, 0.52) 15%, rgba(55, 0, 255, 0.35) 35%, rgba(55, 0, 255, 0.15) 55%, rgba(55, 0, 255, 0) 75%);
+  opacity: 0.5;
+}
+
+/* ELEMENT FIVE WORK PAGE */
+
+.doco-work-five {
+  z-index: 0;
+  pointer-events: none;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  aspect-ratio: 1 / 1;
+  top: 2239px;
+  left: 11px;
+}
+
+.doco-work-five > .ui-cube {
+  z-index: 0;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  transform: rotate(-26.06deg);
+  transform-origin: center;
+  --fill-op: 0.8;
+  --stroke-op: 0.8;
+}
+
+/* ELEMENT SIX WORK PAGE */
+
+.doco-work-six {
+  z-index: 0;
+  pointer-events: none;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1100px;
+  aspect-ratio: 957 / 903;
+  top: 2640px;
+  right: -560px;
+}
+
+.doco-work-six::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(img/texture-one-lg.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.doco-work-six > .grad {
+  position: absolute;
+  z-index: 1;
+  width: 1200px;
+  aspect-ratio: 1 / 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(120, 12, 255, 0.6) 0%, rgba(120, 12, 255, 0.52) 15%, rgba(120, 12, 255, 0.35) 35%, rgba(120, 12, 255, 0.15) 55%, rgba(120, 12, 255, 0) 75%);
+}
+
+.doco-work-six > .ui-cube {
+  z-index: 1;
+  position: absolute;
+  width: 300px;
+  aspect-ratio: 1 / 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(calc(-50% - 119px), calc(-50% - 36px)) rotate(43.18deg);
+  --fill-op: 0.8;
+  --stroke-op: 0.7;
+}
+
+/* ELEMENT SEVEN WORK PAGE */
+
+.doco-work-seven {
+  z-index: 0;
+  pointer-events: none;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  aspect-ratio: 1 / 1;
+  top: 3295px;
+  left: -95px;
+}
+
+.doco-work-seven > .ui-cube {
+  z-index: 0;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  transform: rotate(9.57deg);
+  transform-origin: center;
+  --fill-op: 0.2;
+  --stroke-op: 0.8;
+}
+
+/* ELEMENT EIGHT WORK PAGE */
+
+.doco-work-eight {
+  z-index: 0;
+  pointer-events: none;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  aspect-ratio: 1 / 1;
+  right: -68px;
+  bottom: 1518px;
+}
+
+.doco-work-eight > .ui-cube {
+  z-index: 0;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  transform: rotate(-19.8deg);
+  transform-origin: center;
+  --fill-op: 0.8;
+  --stroke-op: 0.8;
+}
+
 /* DECOR ELEMENTS END */
