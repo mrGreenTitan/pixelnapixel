@@ -216,6 +216,7 @@ if (wrapPages) {
     wrapPages.classList.add("is-work");
 
     updatePageHeight();
+    decorControll();
 
     setTimeout(closeBurgNav, 100);
   });
@@ -244,6 +245,7 @@ if (wrapPages) {
         linkWorkPage.classList.remove("view");
         wrapPages.classList.remove("is-work");
         updatePageHeight();
+        decorControll();
 
         setTimeout(doScroll, 500);
       } else {
@@ -263,6 +265,7 @@ if (wrapPages) {
     wrapPages.classList.remove("is-work");
 
     updatePageHeight();
+    decorControll();
 
     setTimeout(closeBurgNav, 100);
   });
@@ -358,5 +361,18 @@ if (themeSwither) {
         document.documentElement.classList.remove("theme-changing");
       });
     });
+  });
+}
+
+function decorControll() {
+  let allDecorHome = document.querySelectorAll(".decor-h");
+  let allDecorWork = document.querySelectorAll(".decor-w");
+
+  allDecorHome.forEach((decorHome) => {
+    decorHome.classList.toggle("vis-no");
+  });
+
+  allDecorWork.forEach((decorWork) => {
+    decorWork.classList.toggle("vis-no");
   });
 }

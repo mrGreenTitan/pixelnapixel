@@ -232,9 +232,45 @@
     font-size: clamp(14px, 10.1212px + 1.2121vw, 20px);
   }
 
+  .cont-form-wrap .wp-inp-name {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    background: rgba(255, 255, 255, 0.1);
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    box-shadow:
+      inset 1.5px 1.5px 2px 0 rgba(255, 255, 255, 0.25),
+      inset -2px -3px 8px 0 rgba(0, 0, 0, 0.4),
+      4px 12px 24px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .cont-form-wrap .wp-inp-name::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 35%, transparent 65%, rgba(255, 255, 255, 0.04) 100%);
+
+    box-shadow:
+      inset 0 1px 1px rgba(255, 255, 255, 0.2),
+      inset 0 -1px 1px rgba(255, 255, 255, 0.08);
+  }
+
   .cont-form-wrap input {
     height: clamp(44px, 36.2424px + 2.4242vw, 56px);
     font-size: clamp(14px, 12.7071px + 0.404vw, 16px);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
   }
 
   .cont-form-wrap input::placeholder {
@@ -687,6 +723,7 @@
 
   .nav-wrap > nav.mob {
     position: absolute;
+    overflow: hidden;
     left: 0;
     top: -24px;
     width: 100%;
@@ -721,6 +758,69 @@
   .workspage-wrap {
     margin-top: clamp(125px, 110.6842px + 4.4737vw, 142px);
   }
+
+  /* DECOR NAVIGATION START */
+
+  .doco-nav-texture {
+    z-index: 0;
+    pointer-events: none;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(622px, 486.4211px + 42.3684vw, 783px);
+    aspect-ratio: 1 / 1;
+    top: clamp(-360px, -249.4737px + -15.7895vw, -300px);
+    right: clamp(-377px, -259.1053px + -16.8421vw, -313px);
+  }
+
+  .doco-nav-texture::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(/img/texture-one-sm.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.2;
+    z-index: 0;
+  }
+
+  .doco-nav-texture > .grad {
+    position: absolute;
+    z-index: 1;
+    width: clamp(710px, 393.3684px + 98.9474vw, 1086px);
+    aspect-ratio: 1 / 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(120, 12, 255, 0.9) 4%, rgba(120, 12, 255, 0.52) 20%, rgba(120, 12, 255, 0.35) 35%, rgba(120, 12, 255, 0.15) 55%, rgba(120, 12, 255, 0) 75%);
+  }
+
+  .doco-nav-cube {
+    z-index: 0;
+    pointer-events: none;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(250px, 123.6842px + 39.4737vw, 400px);
+    aspect-ratio: 1 / 1;
+    top: 335px;
+    left: clamp(-83px, -27.7368px + -7.8947vw, -53px);
+  }
+
+  .doco-nav-cube > .ui-cube {
+    z-index: 0;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    transform: rotate(-88deg);
+    transform-origin: center;
+    --fill-op: 0.3;
+    --stroke-op: 0.8;
+  }
+
+  /* DECOR NAVIGATION START */
 }
 
 @media (min-width: 320px) and (max-width: 500px) {

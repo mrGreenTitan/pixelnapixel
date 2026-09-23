@@ -339,7 +339,7 @@ h4 {
     background-color 0.3s ease;
 }
 
-.theme-control > label > input {
+.theme-control > label input {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -539,6 +539,14 @@ main {
   width: 44px;
   height: 44px;
   cursor: pointer;
+}
+
+.hero-socials > div > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 .aboutme {
@@ -1004,7 +1012,7 @@ main {
   background-color: var(--contSend_btn_bg_hover);
 }
 
-.hero-socials > div > svg > path,
+.hero-socials > div > a > svg > path,
 .cont-form-wrap .bl-one > .bl-social > .socials-icons > div > svg > path {
   fill: var(--heroSvg);
   transition: fill 0.3s ease;
@@ -1015,7 +1023,7 @@ main {
   transform: scale(1.1);
 }
 
-.hero-socials > div:hover > svg > path,
+.hero-socials > div:hover > a > svg > path,
 .cont-form-wrap .bl-one > .bl-social > .socials-icons > div:hover > svg > path {
   fill: var(--hroSvgHover);
 }
@@ -1025,7 +1033,7 @@ main {
   transform: scale(1.1);
 }
 
-.hero-socials > div.is-pick > svg > path,
+.hero-socials > div.is-pick > a > svg > path,
 .cont-form-wrap .bl-one > .bl-social > .socials-icons > div.is-pick > svg > path {
   fill: var(--hroSvgHover);
 }
@@ -1064,6 +1072,17 @@ main {
 /* HOVER EFFECTS END */
 
 /* DECOR ELEMENTS START */
+
+.decor-h,
+.decor-w {
+  transition: transform 0.5s ease;
+  transform: scale(1);
+}
+
+.decor-h.vis-no,
+.decor-w.vis-no {
+  transform: scale(0);
+}
 
 /* ELEMENT ONE */
 
@@ -1343,16 +1362,6 @@ main {
 }
 
 /* ELEMENT ONE WORK PAGE */
-
-.doco-two.vis-no,
-.doco-three.vis-no,
-.doco-four.vis-no,
-.doco-five.vis-no,
-.doco-six.vis-no,
-.doco-seven.vis-no,
-.doco-eight.vis-no {
-  display: none;
-}
 
 .doco-work-one {
   z-index: 0;
@@ -1728,6 +1737,11 @@ main {
   transform: translate(calc(-50% - 373px), calc(-50% - 275px)) rotate(-99.52deg);
   --fill-op: 0.2;
   --stroke-op: 0.4;
+}
+
+.doco-nav-texture,
+.doco-nav-cube {
+  display: none;
 }
 
 /* DECOR ELEMENTS END */
