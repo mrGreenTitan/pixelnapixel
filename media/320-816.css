@@ -159,6 +159,7 @@
     text-align: center;
     gap: clamp(20px, 29.8788px + -1.2121vw, 26px);
     max-width: 604px;
+    margin-top: 0;
   }
 
   .about-title {
@@ -536,7 +537,7 @@
   .doco-work-eight {
     width: clamp(70px, -78.6869px + 46.4646vw, 300px);
     right: clamp(-25px, 131.4141px + -19.1919vw, 70px);
-    bottom: clamp(1170px, 879.0909px + 90.9091vw, 1620px);
+    bottom: clamp(920px, 468.3871px + 141.129vw, 1620px);
   }
 
   .doco-work-eight > .ui-cube {
