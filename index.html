@@ -40,12 +40,12 @@
     <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; width: 0; height: 0; overflow: hidden" aria-hidden="true">
       <defs>
         <linearGradient id="glass-bevel" x1="0" y1="0" x2="600" y2="600" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stop-color="white" stop-opacity="0.9" />
-          <stop offset="100%" stop-color="white" stop-opacity="0.3" />
+          <stop offset="0%" stop-color="var(--stroke-color, white)" stop-opacity="0.9" />
+          <stop offset="100%" stop-color="var(--stroke-color, white)" stop-opacity="0.3" />
         </linearGradient>
       </defs>
       <symbol id="cube" viewBox="0 0 600 600">
-        <g fill="white" fill-opacity="var(--fill-op, 0.2)" stroke="url(#glass-bevel)" stroke-width="1.5" stroke-opacity="var(--stroke-op, 1)">
+        <g fill="var(--cube-color, white)" fill-opacity="var(--fill-op, 0.2)" stroke="var(--stroke-color, white)" stroke-width="1.5" stroke-opacity="var(--stroke-op, 1)">
           <path
             d="M492.188 112.5L456.526 133.089L383.772 90.423L300.07 138.748H298.724L215.942 90.9539L173.006 115.743L134.199 94.847L293.791 2.70633C296.692 1.03165 300.265 1.03164 303.166 2.70633L335.979 21.6506L253.442 69.3033L299.397 95.8357L381.934 48.1831L492.188 112.5Z"
           />
@@ -72,7 +72,7 @@
     <div class="container">
       <!-- DECORATION HOME START -->
 
-      <div class="doco-one">
+      <div class="doco-one dhn">
         <div class="grad"></div>
         <svg class="ui-cube">
           <use href="#cube"></use>
@@ -225,7 +225,7 @@
             </div>
 
             <nav id="navigation" class="mob">
-              <div class="doco-nav-texture">
+              <div class="doco-nav-texture dhb">
                 <div class="grad"></div>
               </div>
 
@@ -236,7 +236,7 @@
                 <li><a href="#" id="linkContactMe" data-i18n="nav_contant">Зв'язок</a></li>
               </ul>
 
-              <div class="doco-nav-cube">
+              <div class="doco-nav-cube dhb">
                 <svg class="ui-cube">
                   <use href="#cube"></use>
                 </svg>

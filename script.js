@@ -360,6 +360,7 @@ if (themeSwither) {
   const input = themeSwither.querySelector("#inpTheme");
   const isLight = document.documentElement.classList.contains("light");
   input.checked = isLight;
+  decorLightControll(isLight);
 
   requestAnimationFrame(() => {
     document.documentElement.classList.remove("theme-loading");
@@ -371,6 +372,8 @@ if (themeSwither) {
     document.documentElement.classList.toggle("light", isLight);
     document.documentElement.classList.toggle("dark", !isLight);
     localStorage.setItem("theme", isLight ? "light" : "dark");
+
+    decorLightControll(isLight);
 
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
@@ -390,5 +393,26 @@ function decorControll() {
 
   allDecorWork.forEach((decorWork) => {
     decorWork.classList.toggle("vis-no");
+  });
+}
+
+function decorLightControll(isLightActive) {
+  let allDecorHome = document.querySelectorAll(".decor-h");
+  let allDecorWork = document.querySelectorAll(".decor-w");
+  let decorHeaderNav = document.querySelector(".dhn");
+  let AllburDecorNav = document.querySelectorAll(".dhb");
+
+  allDecorHome.forEach((decorHome) => {
+    decorHome.classList.toggle("lvs", isLightActive);
+  });
+
+  allDecorWork.forEach((decorWork) => {
+    decorWork.classList.toggle("lvs", isLightActive);
+  });
+
+  decorHeaderNav.classList.toggle("lvs", isLightActive);
+
+  AllburDecorNav.forEach((decorBurg) => {
+    decorBurg.classList.toggle("lvs", isLightActive);
   });
 }

@@ -138,7 +138,7 @@
     margin-top: clamp(0px, 13.1717px + -1.6162vw, 8px);
   }
 
-  .hero-socials > div > svg {
+  .hero-socials > div > a > svg {
     width: clamp(28px, 17.6566px + 3.2323vw, 44px);
     height: clamp(28px, 17.6566px + 3.2323vw, 44px);
   }
@@ -232,45 +232,9 @@
     font-size: clamp(14px, 10.1212px + 1.2121vw, 20px);
   }
 
-  .cont-form-wrap .wp-inp-name {
-    position: relative;
-    overflow: hidden;
-
-    width: 100%;
-    box-sizing: border-box;
-    border-radius: 100px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-
-    background: rgba(255, 255, 255, 0.1);
-
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-
-    box-shadow:
-      inset 1.5px 1.5px 2px 0 rgba(255, 255, 255, 0.25),
-      inset -2px -3px 8px 0 rgba(0, 0, 0, 0.4),
-      4px 12px 24px 0 rgba(0, 0, 0, 0.3);
-  }
-
-  .cont-form-wrap .wp-inp-name::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    pointer-events: none;
-
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 35%, transparent 65%, rgba(255, 255, 255, 0.04) 100%);
-
-    box-shadow:
-      inset 0 1px 1px rgba(255, 255, 255, 0.2),
-      inset 0 -1px 1px rgba(255, 255, 255, 0.08);
-  }
-
   .cont-form-wrap input {
     height: clamp(44px, 36.2424px + 2.4242vw, 56px);
     font-size: clamp(14px, 12.7071px + 0.404vw, 16px);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
   }
 
   .cont-form-wrap input::placeholder {
@@ -821,6 +785,36 @@
   }
 
   /* DECOR NAVIGATION START */
+
+  /* DECOR TEXTURE */
+
+  .doco-nav-texture.lvs::before {
+    z-index: -5;
+    opacity: 0.7;
+  }
+
+  .doco-nav-texture.lvs > .grad {
+    z-index: -4;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      rgba(120, 12, 255, 1) 0%,
+      rgba(120, 12, 255, 1) 15%,
+      rgba(120, 12, 255, 0.85) 28%,
+      rgba(120, 12, 255, 0.52) 42%,
+      rgba(120, 12, 255, 0.25) 55%,
+      rgba(120, 12, 255, 0) 70%
+    );
+  }
+
+  /* DECOR CUBE */
+
+  .doco-nav-cube.lvs > .ui-cube {
+    --cube-color: black;
+    --fill-op: 0.3;
+    --stroke-color: black;
+    --stroke-op: 0.2;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 500px) {

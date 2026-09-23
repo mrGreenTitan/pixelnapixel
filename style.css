@@ -1084,6 +1084,21 @@ main {
   transform: scale(0);
 }
 
+.dhn.lvs::before {
+  z-index: -5;
+  opacity: 0.7;
+}
+
+.dhn.lvs > .grad {
+  z-index: -4;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(120, 12, 255, 1) 0%, rgba(120, 12, 255, 0.85) 12%, rgba(120, 12, 255, 0.52) 25%, rgba(120, 12, 255, 0.25) 42%, rgba(120, 12, 255, 0) 65%);
+}
+
+.dhn.lvs > .ui-cube {
+  z-index: -3;
+}
+
 /* ELEMENT ONE */
 
 .doco-one {
@@ -1739,9 +1754,243 @@ main {
   --stroke-op: 0.4;
 }
 
+/* DECOR ELEMENTS LIGHT START */
+
+/* DECO ONE HOME PAGE */
+
 .doco-nav-texture,
 .doco-nav-cube {
   display: none;
 }
+
+/* DECO TWO HOME PAGE */
+
+.doco-two.lvs > .ui-cube {
+  --cube-color: black;
+}
+
+/* DECO THRE HOME PAGE */
+
+.doco-three.lvs::before {
+  z-index: -5;
+  opacity: 0.7;
+}
+
+.doco-three.lvs > .grad {
+  z-index: -4;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 255, 255, 1) 0%, rgba(0, 255, 255, 0.85) 12%, rgba(0, 255, 255, 0.52) 25%, rgba(0, 255, 255, 0.2) 45%, rgba(0, 255, 255, 0) 70%);
+}
+
+/* DECO FOUR HOME PAGE */
+
+.doco-four.lvs::before {
+  z-index: -5;
+  opacity: 0.7;
+}
+
+.doco-four.lvs > .grad {
+  z-index: -4;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(55, 0, 255, 1) 0%, rgba(55, 0, 255, 0.85) 12%, rgba(55, 0, 255, 0.52) 25%, rgba(55, 0, 255, 0.2) 45%, rgba(55, 0, 255, 0) 70%);
+}
+
+/* DECO FIVE HOME PAGE */
+
+.doco-five.lvs > .ui-cube {
+  --cube-color: black;
+  --fill-op: 0.3;
+}
+
+/* DECO SIX HOME PAGE */
+
+.doco-six.lvs > .ui-cube {
+  --cube-color: black;
+  --fill-op: 0.2;
+}
+
+/* DECO SEVEN HOME PAGE */
+
+.doco-seven.lvs > .ui-cube {
+  --cube-color: black;
+  --fill-op: 0.6;
+  --stroke-color: black;
+  --stroke-op: 0.2;
+}
+
+/* DECO EIGHT HOME PAGE */
+
+.doco-eight.lvs::before {
+  z-index: -5;
+  opacity: 0.7;
+}
+
+.doco-eight.lvs > .grad {
+  z-index: -4;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(55, 0, 255, 1) 0%, rgba(55, 0, 255, 0.85) 12%, rgba(55, 0, 255, 0.52) 25%, rgba(55, 0, 255, 0.2) 45%, rgba(55, 0, 255, 0) 70%);
+}
+
+.doco-eight.lvs > .ui-cube {
+  z-index: -3;
+  --cube-color: black;
+  --fill-op: 0.4;
+  --stroke-color: black;
+  --stroke-op: 0.2;
+}
+
+/* DECO ONE WORK PAGE */
+
+.doco-work-one.lvs > .ui-cube {
+  --cube-color: black;
+  --fill-op: 0.4;
+  --stroke-color: black;
+  --stroke-op: 0.2;
+}
+
+/* DECO TWO WORK PAGE */
+
+.doco-work-two.lvs > .ui-cube {
+  --cube-color: black;
+  --fill-op: 0.6;
+  --stroke-color: black;
+  --stroke-op: 0.2;
+}
+
+/* DECO THREE WORK PAGE */
+
+.doco-work-three.lvs {
+  z-index: -1;
+}
+
+.doco-work-three.lvs::before {
+  z-index: -5;
+  opacity: 0.7;
+}
+
+.doco-work-three.lvs > .grad {
+  z-index: -4;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 255, 255, 1) 0%, rgba(0, 255, 255, 0.85) 12%, rgba(0, 255, 255, 0.52) 25%, rgba(0, 255, 255, 0.2) 45%, rgba(0, 255, 255, 0) 70%);
+}
+
+/* DECO FOUR WORK PAGE */
+
+.doco-work-four.lvs::before {
+  z-index: -5;
+  opacity: 0.7;
+}
+
+.doco-work-four.lvs > .grad {
+  z-index: -4;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(55, 0, 255, 1) 0%, rgba(55, 0, 255, 0.85) 12%, rgba(55, 0, 255, 0.52) 25%, rgba(55, 0, 255, 0.2) 45%, rgba(55, 0, 255, 0) 70%);
+}
+
+/* DECO FIVE WORK PAGE */
+
+.doco-work-five.lvs > .ui-cube {
+  --cube-color: black;
+  --fill-op: 0.5;
+  --stroke-color: black;
+  --stroke-op: 0.2;
+}
+
+/* DECO SIX WORK PAGE */
+
+.doco-work-six.lvs::before {
+  z-index: -5;
+  opacity: 0.7;
+}
+
+.doco-work-six.lvs > .grad {
+  z-index: -4;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(120, 12, 255, 1) 0%, rgba(120, 12, 255, 0.85) 12%, rgba(120, 12, 255, 0.52) 25%, rgba(120, 12, 255, 0.2) 45%, rgba(120, 12, 255, 0) 70%);
+}
+
+.doco-work-six.lvs > .ui-cube {
+  --cube-color: black;
+  --fill-op: 0.6;
+  --stroke-color: black;
+  --stroke-op: 0.2;
+}
+
+/* DECO SEVEN WORK PAGE */
+
+.doco-work-seven.lvs > .ui-cube {
+  --cube-color: black;
+  --fill-op: 0.2;
+  --stroke-color: black;
+  --stroke-op: 0.2;
+}
+
+/* DECO SEVEN WORK PAGE */
+
+.doco-work-eight.lvs > .ui-cube {
+  --cube-color: black;
+  --fill-op: 0.8;
+  --stroke-color: black;
+  --stroke-op: 0.2;
+}
+
+/* DECO NINE WORK PAGE */
+
+.doco-work-nine.lvs::before {
+  z-index: -5;
+  opacity: 0.7;
+}
+
+.doco-work-nine.lvs > .grad {
+  z-index: -4;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(55, 0, 255, 1) 0%, rgba(55, 0, 255, 1) 25%, rgba(55, 0, 255, 0.65) 40%, rgba(55, 0, 255, 0.25) 55%, rgba(55, 0, 255, 0) 75%);
+}
+
+.doco-work-nine.lvs > .ui-cube {
+  --cube-color: black;
+  --fill-op: 0.6;
+  --stroke-color: black;
+  --stroke-op: 0.2;
+}
+
+/* DECO TEB WORK PAGE */
+
+.doco-work-ten.lvs > .ui-cube {
+  --cube-color: black;
+  --fill-op: 0.6;
+  --stroke-color: black;
+  --stroke-op: 0.2;
+}
+
+/* DECO ELEVEN WORK PAGE */
+
+.doco-work-eleven.lvs::before {
+  z-index: -5;
+  opacity: 0.7;
+}
+
+.doco-work-eleven.lvs > .grad {
+  z-index: -4;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(180, 255, 255, 1) 0%,
+    rgba(0, 255, 255, 1) 7%,
+    rgba(0, 255, 255, 0.6) 20%,
+    rgba(0, 255, 255, 0.35) 35%,
+    rgba(0, 255, 255, 0.15) 55%,
+    rgba(0, 255, 255, 0) 75%
+  );
+}
+
+.doco-work-eleven.lvs > .ui-cube {
+  --cube-color: black;
+  --fill-op: 0.2;
+  --stroke-color: black;
+  --stroke-op: 0.1;
+}
+
+/* DECOR ELEMENTS LIGHT END */
 
 /* DECOR ELEMENTS END */
