@@ -192,6 +192,8 @@ const linkWorkPage = document.getElementById("linkWorkPage");
 const linkContactMe = document.getElementById("linkContactMe");
 const homepage = document.getElementById("homepage");
 const workpage = document.getElementById("workpage");
+const startProject = document.getElementById("startProject");
+const btnWorks = document.getElementById("btnWorks");
 
 if (wrapPages) {
   function updatePageHeight() {
@@ -209,6 +211,19 @@ if (wrapPages) {
   };
 
   linkWorkPage.addEventListener("click", function () {
+    if (linkWorkPage.classList.contains("view")) return;
+
+    linkWorkPage.classList.add("view");
+    linkHomePage.classList.remove("view");
+    wrapPages.classList.add("is-work");
+
+    updatePageHeight();
+    decorControll();
+
+    setTimeout(closeBurgNav, 100);
+  });
+
+  btnWorks.addEventListener("click", function () {
     if (linkWorkPage.classList.contains("view")) return;
 
     linkWorkPage.classList.add("view");
@@ -256,6 +271,7 @@ if (wrapPages) {
 
   scrollToSection(linkAboutMe, "aboutMe");
   scrollToSection(linkContactMe, "contactMe");
+  scrollToSection(startProject, "contactMe");
 
   linkHomePage.addEventListener("click", function () {
     if (linkHomePage.classList.contains("view")) return;
