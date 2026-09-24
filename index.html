@@ -359,17 +359,38 @@
               <section id="contactMe" class="contact">
                 <div class="contact-title" data-i18n="contact_title">На зв'язку</div>
                 <div class="cont-form-wrap">
-                  <form class="cont-form" action="#">
+                  <form id="form" class="cont-form" action="#" novalidate>
                     <div class="bl-one">
                       <div class="bl-inp-name">
                         <label for="inpName" data-i18n="inp_name">Ім'я</label>
                         <div class="wp-inp-name">
-                          <input id="inpName" type="text" name="name" placeholder="Напишіть своє ім'я" data-i18n-placeholder="input_name_uk" />
+                          <input
+                            id="inpName"
+                            type="text"
+                            name="name"
+                            placeholder="Напишіть своє ім'я"
+                            data-i18n-placeholder="input_name_uk"
+                            minlength="2"
+                            maxlength="100"
+                            autocomplete="name"
+                            required
+                          />
                         </div>
                       </div>
                       <div class="bl-inp-phone">
                         <label for="inpPhone" data-i18n="inp_phone">Номер телефону</label>
-                        <input id="inpPhone" type="text" name="phone" placeholder="Вкажіть ваш телефон" data-i18n-placeholder="input_phone_uk" />
+                        <input
+                          id="inpPhone"
+                          type="tel"
+                          name="phone"
+                          placeholder="Вкажіть ваш телефон"
+                          data-i18n-placeholder="input_phone_uk"
+                          minlength="9"
+                          maxlength="20"
+                          autocomplete="tel"
+                          inputmode="tel"
+                          required
+                        />
                       </div>
                       <div class="bl-social">
                         <div class="social-text">
@@ -422,7 +443,7 @@
                         <input id="inpSocials" type="text" name="social" placeholder="@you_instagram78" />
                       </div>
                     </div>
-                    <button class="cont-btn-send" disabled data-i18n="btn_form_send">Надіслати</button>
+                    <button id="formBtn" class="cont-btn-send" data-i18n="btn_form_send" disabled>Надіслати</button>
                   </form>
                 </div>
               </section>
@@ -832,6 +853,42 @@
       </main>
       <footer></footer>
     </div>
+    <div id="successModal" class="modal-vis">
+      <div class="wrap-icon-socef">
+        <svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" fill="currentColor" class="bi bi-check-square" viewBox="0 0 16 16">
+          <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+          <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z" />
+        </svg>
+      </div>
+      <div class="mod-title">Все вийшло!</div>
+      <div class="mod-text">Зв'яжуся з вами найближчим часом</div>
+      <div class="mod-btns">
+        <button class="mod-btn-close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-square" viewBox="0 0 16 16">
+            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
+            />
+          </svg>
+        </button>
+        <button class="mod-btn-portf">Дивитись портфоліо</button>
+        <div class="wrap-btn-like">
+          <button>
+            <svg class="hear-one" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-suit-heart" viewBox="0 0 16 16">
+              <path
+                d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.6 7.6 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"
+              />
+            </svg>
+
+            <svg class="hear-two htwo-no-vis" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ff4d4d" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
+              <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.268-2.92 6.025-7.382 10.222a.5.5 0 0 1-.722 0C3.42 10.945.5 8.188.5 4.92.5 2.755 2.29 1 4 1z" />
+            </svg>
+          </button>
+          <div id="modLikerCounter"></div>
+        </div>
+      </div>
+    </div>
     <script src="script.js" defer></script>
+    <script type="module" src="js/form.js"></script>
   </body>
 </html>

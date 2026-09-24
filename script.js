@@ -223,7 +223,14 @@ if (wrapPages) {
     setTimeout(closeBurgNav, 100);
   });
 
-  btnWorks.addEventListener("click", function () {
+  btnWorks.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+
     if (linkWorkPage.classList.contains("view")) return;
 
     linkWorkPage.classList.add("view");
@@ -233,7 +240,9 @@ if (wrapPages) {
     updatePageHeight();
     decorControll();
 
-    setTimeout(closeBurgNav, 100);
+    if (window.innerWidth <= 700) {
+      setTimeout(closeBurgNav, 100);
+    }
   });
 
   function scrollToSection(linkElement, sectionId) {

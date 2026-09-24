@@ -816,6 +816,36 @@
     --stroke-color: black;
     --stroke-op: 0.2;
   }
+
+  /* MODAL */
+  #successModal {
+    max-width: clamp(300px, 89.4737px + 65.7895vw, 550px);
+  }
+
+  .mod-text {
+    font-size: clamp(14px, 8.9474px + 1.5789vw, 20px);
+  }
+
+  .mod-btns {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .mod-btn-portf {
+    height: clamp(44px, 25.4737px + 5.7895vw, 66px);
+    font-size: clamp(16px, 9.2632px + 2.1053vw, 24px);
+  }
+
+  .wrap-btn-like {
+    gap: 16px;
+  }
+
+  #modLikerCounter {
+    position: unset;
+    inset: unset;
+    transform: translateX(0);
+  }
 }
 
 @media (min-width: 320px) and (max-width: 500px) {

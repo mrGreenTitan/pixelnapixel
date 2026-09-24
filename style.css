@@ -1994,3 +1994,120 @@ main {
 /* DECOR ELEMENTS LIGHT END */
 
 /* DECOR ELEMENTS END */
+
+#successModal {
+  pointer-events: none;
+  opacity: 0;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 40px 0px;
+  max-width: 550px;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% - -350px)) scale(0);
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  border: 1px solid white;
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+}
+
+.wrap-icon-socef > svg > path {
+  color: #22c55e;
+}
+
+.mod-title {
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.mod-text {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.mod-btns {
+  display: flex;
+  gap: 32px;
+}
+
+.mod-btn-portf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  padding: 0 32px;
+  border-radius: 50px;
+  border: 0.5px solid var(--workBtn_stoke);
+  background-color: var(--herobtn_two);
+  color: var(--text);
+  font-size: 24px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.mod-btn-portf:hover {
+  background-color: var(--herobtn_twoHover);
+}
+
+.mod-btn-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  transition: transform 0.4s ease;
+}
+
+.mod-btn-close:hover {
+  transform: scale(1.2);
+}
+
+.wrap-btn-like {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+}
+
+.wrap-btn-like > button {
+  display: flex;
+}
+
+.wrap-btn-like > button > svg > path {
+  color: #ff4d4d;
+}
+
+.hear-two {
+  position: absolute;
+  transition: transform 0.2s ease opacity 0.2s ease;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hear-two.htwo-no-vis {
+  opacity: 0;
+  transform: scale(0);
+}
+
+#modLikerCounter {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+#successModal.modal-vis {
+  pointer-events: auto;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
