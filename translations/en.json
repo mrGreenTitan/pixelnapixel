@@ -89,5 +89,9 @@
   "work_eight_title": "WANDER.gig — Responsive Website for a Philippine Travel Service",
   "works_eight_concept_text": "Landing page concept for a travel service focused on planning trips across the Philippines, helping users choose destinations, package tours, and custom routes based on different travel styles. The project emphasizes an immersive, atmospheric visual presentation with a convenient search bar, interactive destination card carousel, key benefits block, curated tour packages, travel blog, and full mobile optimization.",
   "works_eight_respons_text": "Fully optimized for desktop and mobile devices. This provides an intuitive mobile experience with a dedicated navigation menu, optimized destination layouts, and a highly readable content structure adapted for smaller screens.",
-  "works_eight_results_li_five": "Dynamic Destination Carousel"
+  "works_eight_results_li_five": "Dynamic Destination Carousel",
+
+  "modile-title": "All done!",
+  "modile-text": "I will get back to you shortly",
+  "modile-btn-portf": "View portfolio"
 }
